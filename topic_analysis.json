@@ -1,0 +1,29 @@
+{
+  "total_unique_topics": 24,
+  "topics": {
+    "Dynamic Programming": 248,
+    "Math": 192,
+    "Tree": 156,
+    "Depth-first Search": 155,
+    "Greedy": 149,
+    "Hash Table": 144,
+    "Binary Search": 102,
+    "Breadth-first Search": 88,
+    "Sort": 76,
+    "Two Pointers": 74,
+    "Backtracking": 66,
+    "Stack": 64,
+    "Graph": 59,
+    "Bit Manipulation": 55,
+    "Heap": 45,
+    "Linked List": 43,
+    "Recursion": 38,
+    "Union Find": 37,
+    "Sliding Window": 27,
+    "Trie": 21,
+    "Divide and Conquer": 20,
+    "Segment Tree": 16,
+    "Ordered Map": 14,
+    "Queue": 12
+  }
+}
