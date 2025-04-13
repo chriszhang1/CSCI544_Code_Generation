@@ -52,3 +52,21 @@
       "Test with Examples: Verify solution on provided and additional test cases"
     ]
 }
+```
+
+### Divide and Conquer
+```json
+{
+    "category_specific_prompt": [
+      "Validate D&C applicability through problem decomposition analysis",
+      "Build recursive structure with complexity proofs",
+      "Design merge strategy with cross-boundary handling",
+      "Verify against all sample test cases through symbolic execution",
+      "Generate code implementing the verified solution",
+      "Display the entire process of testing with each sample input",
+      "Include time/space complexity comments in Big-O notation",
+      "Ensure function signature matches the given problem",
+      "Manually execute solution on all test cases and verify correctness"
+    ]
+}
+```
