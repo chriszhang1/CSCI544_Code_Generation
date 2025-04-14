@@ -70,3 +70,20 @@
     ]
 }
 ```
+
+### Two Pointer
+```json
+{
+    "category_specific_prompt": [
+      "Begin by thoroughly analyzing the problem requirements and constraints. Clearly define the problem’s goal and identify the variables involved.",
+      "Formulate a clear strategy for pointer selection, justifying the choice of pointers, and explaining how they efficiently solve the problem. Ensure the approach is optimal.",
+      "Define the precise movement logic for the pointers. Detail the conditions under which each pointer is incremented or decremented, including termination conditions and exit criteria.",
+      "Address edge case handling, ensuring that all potential pitfalls (such as empty input, minimal input, or extreme values) are properly managed and do not cause out-of-bound errors.",
+      "Implement the solution with clean, well-commented code that follows best practices. Make sure the pointer movement logic is correctly applied and easy to follow.",
+      "Analyze the time and space complexity of your approach. Ensure it meets the problem's constraints and is optimal for large inputs.",
+      "Test the solution using provided sample test cases, as well as additional test cases that cover normal scenarios, edge cases, and extreme values. For at least one test case, provide a step-by-step walkthrough.",
+      "After implementation, review the code to ensure correctness. Make sure that the pointers never violate boundaries, all test cases pass, and the logic aligns perfectly with the approach.",
+      "If any component fails (e.g., incorrect edge-case handling or pointer mismanagement), refine the solution iteratively until it is robust and reliable."
+    ]
+}
+```
