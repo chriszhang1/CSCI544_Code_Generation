@@ -1,0 +1,47 @@
+{
+  "32": {
+    "question_number": "32",
+    "question_name": "longest-valid-parentheses",
+    "timestamp": "2025-04-13T17:16:23.525589",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 8,
+      "percentile": 26
+    },
+    "memory": {
+      "usage_mb": 18.6,
+      "percentile": 19
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "22": {
+    "question_number": "22",
+    "question_name": "generate-parentheses",
+    "timestamp": "2025-04-13T17:21:38.519838",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 35,
+      "percentile": 5
+    },
+    "memory": {
+      "usage_mb": 18.1,
+      "percentile": 44
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3519": {
+    "question_number": "3519",
+    "question_name": "count-numbers-with-non-decreasing-digits",
+    "timestamp": "2025-04-13T17:24:00.492971",
+    "status": "Failed",
+    "accuracy": 7.5,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 73,
+    "total_cases": 973
+  }
+}
