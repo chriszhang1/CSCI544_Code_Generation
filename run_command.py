@@ -181,15 +181,21 @@ def save_test_results(question_number, results):
     """Save test results to a JSON file"""
     results_file = 'leetcode_results.json'
     
-    # Load existing results if file exists
+    # Load existing results if file exists and is not empty
     all_results = {}
     if os.path.exists(results_file):
-        with open(results_file, 'r') as f:
-            all_results = json.load(f)
+        try:
+            with open(results_file, 'r') as f:
+                content = f.read().strip()
+                if content:  # Only try to load if file is not empty
+                    all_results = json.loads(content)
+        except json.JSONDecodeError:
+            print(f"Warning: Could not read existing results file. Creating new one.")
+            all_results = {}
     
     # Add new result
     question_name = get_question_name(question_number)
-    all_results[question_number] = {
+    all_results[str(question_number)] = {  # Convert question_number to string for JSON key
         'question_number': question_number,
         'question_name': question_name,
         'timestamp': datetime.datetime.now().isoformat(),
@@ -197,8 +203,12 @@ def save_test_results(question_number, results):
     }
     
     # Save updated results
-    with open(results_file, 'w') as f:
-        json.dump(all_results, f, indent=2)
+    try:
+        with open(results_file, 'w') as f:
+            json.dump(all_results, f, indent=2)
+    except Exception as e:
+        print(f"Warning: Could not save results to file: {e}")
+        return None
     
     return results_file
 
@@ -223,11 +233,7 @@ def run_command_method1(command):
         'test_results': test_results
     }
 
-# Example usage
-if __name__ == "__main__":
-    # Get question number from command line argument or use default
-    question_number = sys.argv[1] if len(sys.argv) > 1 else "1"
-    
+def main(question_number):
     # Step 1: Get the leetcode question
     print(f"Getting question {question_number}...")
     question = get_leetcode_question(question_number)
@@ -282,3 +288,11 @@ if __name__ == "__main__":
     if result['stderr']:  # Now only contains real errors
         print("\nErrors encountered:")
         print(result['stderr'])
+
+# Example usage
+if __name__ == "__main__":
+    start_question = int(sys.argv[1] if len(sys.argv) > 1 else "1")
+    end_question = int(sys.argv[2] if len(sys.argv) > 1 else "1")
+    for i in range(start_question, end_question+1):
+        print("Solving Question: " + str(i) + "\n")
+        main(i)
