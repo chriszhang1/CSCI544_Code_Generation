@@ -86,3 +86,90 @@
     ]
 }
 ```
+### Math
+```json
+{
+  "category_specific_prompt": [
+    "Analyze the mathematical problem and identify the key concepts involved (e.g., algebra, geometry, number theory, combinatorics, probability).",
+    "Break down complex problems into simpler mathematical operations or concepts.",
+    "Consider mathematical properties, formulas, or theorems that apply to the problem.",
+    "Identify patterns or relationships that can be expressed mathematically.",
+    "Develop a clear mathematical approach before coding, using mathematical notation if helpful.",
+    "Implement the solution with attention to numerical precision, potential overflow issues, and edge cases.",
+    "Test the solution with boundary values and special cases to ensure mathematical correctness.",
+    "Analyze the time and space complexity in terms of mathematical operations.",
+    "Verify that your solution handles all constraints and scales appropriately for the input size."
+  ]
+}
+```
+
+### Depth-first Search
+```json
+{
+  "category_specific_prompt": [
+    "Identify the problem structure (tree, graph, matrix, etc.) and determine if DFS is appropriate.",
+    "Define what constitutes a 'state' in your search and what you're looking for (path, configuration, etc.).",
+    "Determine the traversal order priority (which neighbors to visit first) if relevant.",
+    "Design the recursive or iterative DFS function with clear parameters and return values.",
+    "Implement a mechanism to track visited states to avoid cycles or redundant exploration.",
+    "Handle backtracking appropriately if the problem requires finding paths or configurations.",
+    "Consider space optimization: can you use path pruning or early termination conditions?",
+    "Code the solution with attention to stack overflow risks for large inputs.",
+    "Analyze the time complexity (usually O(V+E) for graphs) and space complexity (often O(V) for the recursion stack).",
+    "Test the solution with diverse inputs including edge cases like disconnected components or empty structures."
+  ]
+}
+```
+
+### Hash Table
+```json
+{
+  "category_specific_prompt": [
+    "Analyze if the problem involves fast lookups, frequency counting, grouping, or finding duplicates/unique elements.",
+    "Identify what should be used as keys and values in your hash table.",
+    "Determine the appropriate hash table structure (hash map, hash set, counter, etc.) for your needs.",
+    "Consider potential key collisions and how to handle them if implementing a custom hash table.",
+    "Plan the algorithm to minimize lookups and updates to the hash table.",
+    "Implement the solution with clear hash table initialization and operations.",
+    "Address edge cases like empty inputs, duplicate keys, or non-existent lookups.",
+    "Analyze the time complexity (usually O(1) for lookups/inserts) and space complexity (O(n) for storing n elements).",
+    "Consider alternative data structures if constraints suggest hash tables might not be optimal.",
+    "Test the solution with various input patterns, including worst-case scenarios for hash functions."
+  ]
+}
+```
+
+### Binary Search
+```json
+{
+  "category_specific_prompt": [
+    "Verify that the problem involves searching in a sorted array or can be transformed into such a problem.",
+    "Identify the search space and what you're searching for (a value, an index, a boundary condition).",
+    "Define precise low and high boundary indices for your search space.",
+    "Establish a clear mid-point calculation method (consider potential integer overflow for large arrays).",
+    "Formulate the condition that determines which half of the search space to eliminate.",
+    "Handle edge cases where the target might not exist in the array.",
+    "Implement loop termination conditions carefully to avoid infinite loops.",
+    "Consider whether the problem requires finding exact matches or boundaries (e.g., lower/upper bound).",
+    "Analyze the time complexity (typically O(log n)) and constant-space complexity advantage.",
+    "Test the solution with various inputs including edge cases like empty arrays, single elements, or duplicates."
+  ]
+}
+```
+
+### Breadth-first Search
+```json
+{
+  "category_specific_prompt": [
+    "Determine if the problem involves finding shortest paths, level-order traversals, or exploring nearest neighbors first.",
+    "Define what constitutes a 'state' in your search space and what goal states look like.",
+    "Identify the data structure for the queue (simple queue, deque, priority queue for weighted paths).",
+    "Design a system to track visited states to prevent cycles and redundant exploration.",
+    "Implement the BFS algorithm with proper queue operations and neighbor generation.",
+    "Consider optimizations like bi-directional BFS for certain problems.",
+    "Handle level tracking if the problem requires counting steps or grouping by distance.",
+    "Analyze the time complexity (usually O(V+E) for graphs) and space complexity (often O(V) for the queue).",
+    "Address edge cases like disconnected components, empty structures, or multiple valid solutions.",
+    "Test your solution with diverse inputs to verify correctness and efficiency."
+  ]
+}
