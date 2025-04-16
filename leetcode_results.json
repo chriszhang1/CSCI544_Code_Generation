@@ -1,163 +1,51 @@
 {
-  "1000": {
-    "question_number": 1000,
-    "question_name": "minimum-cost-to-merge-stones",
-    "timestamp": "2025-04-14T19:46:38.773706",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "1001": {
-    "question_number": 1001,
-    "question_name": "grid-illumination",
-    "timestamp": "2025-04-14T19:46:47.951843",
+  "19": {
+    "question_number": 19,
+    "question_name": "remove-nth-node-from-end-of-list",
+    "timestamp": "2025-04-15T21:03:17.987705",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
-      "time_ms": 239,
-      "percentile": 27
+      "time_ms": 3,
+      "percentile": 5
     },
     "memory": {
-      "usage_mb": 37.1,
-      "percentile": 49
+      "usage_mb": 17.9,
+      "percentile": 34
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "1002": {
-    "question_number": 1002,
-    "question_name": "find-common-characters",
-    "timestamp": "2025-04-14T19:46:53.645273",
+  "20": {
+    "question_number": 20,
+    "question_name": "valid-parentheses",
+    "timestamp": "2025-04-15T21:03:27.150242",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
-      "time_ms": 11,
-      "percentile": 85
+      "time_ms": 0,
+      "percentile": 100
     },
     "memory": {
-      "usage_mb": 17.6,
-      "percentile": 52
+      "usage_mb": 17.8,
+      "percentile": 80
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "1003": {
-    "question_number": 1003,
-    "question_name": "check-if-word-is-valid-after-substitutions",
-    "timestamp": "2025-04-14T19:46:58.483329",
+  "21": {
+    "question_number": 21,
+    "question_name": "merge-two-sorted-lists",
+    "timestamp": "2025-04-15T21:03:38.506884",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
-      "time_ms": 31,
-      "percentile": 26
+      "time_ms": 0,
+      "percentile": 100
     },
     "memory": {
-      "usage_mb": 17.7,
-      "percentile": 79
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "1004": {
-    "question_number": 1004,
-    "question_name": "max-consecutive-ones-iii",
-    "timestamp": "2025-04-14T19:47:04.331658",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 71,
-      "percentile": 81
-    },
-    "memory": {
-      "usage_mb": 18.2,
-      "percentile": 12
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "1005": {
-    "question_number": 1005,
-    "question_name": "maximize-sum-of-array-after-k-negations",
-    "timestamp": "2025-04-14T19:47:10.083366",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 4,
-      "percentile": 30
-    },
-    "memory": {
-      "usage_mb": 17.6,
-      "percentile": 55
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "1006": {
-    "question_number": 1006,
-    "question_name": "clumsy-factorial",
-    "timestamp": "2025-04-14T19:47:21.796472",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "1007": {
-    "question_number": 1007,
-    "question_name": "minimum-domino-rotations-for-equal-row",
-    "timestamp": "2025-04-14T19:47:27.995630",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 33,
-      "percentile": 49
-    },
-    "memory": {
-      "usage_mb": 18.2,
-      "percentile": 48
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "1008": {
-    "question_number": 1008,
-    "question_name": "construct-binary-search-tree-from-preorder-traversal",
-    "timestamp": "2025-04-14T19:47:38.116912",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "1009": {
-    "question_number": 1009,
-    "question_name": "complement-of-base-10-integer",
-    "timestamp": "2025-04-14T19:47:42.439176",
-    "status": "Failed",
-    "accuracy": 99.22,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 127,
-    "total_cases": 128
-  },
-  "1010": {
-    "question_number": 1010,
-    "question_name": "pairs-of-songs-with-total-durations-divisible-by-60",
-    "timestamp": "2025-04-14T19:47:48.993137",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 23,
-      "percentile": 61
-    },
-    "memory": {
-      "usage_mb": 20.8,
-      "percentile": 62
+      "usage_mb": 17.8,
+      "percentile": 38
     },
     "cases_passed": null,
     "total_cases": null
