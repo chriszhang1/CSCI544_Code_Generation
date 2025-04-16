@@ -1,52 +1,74 @@
 {
-  "19": {
-    "question_number": 19,
-    "question_name": "remove-nth-node-from-end-of-list",
-    "timestamp": "2025-04-15T21:03:17.987705",
+  "1": {
+    "question_number": 1,
+    "question_name": "two-sum",
+    "timestamp": "2025-04-15T22:04:01.432524",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
-      "time_ms": 3,
-      "percentile": 5
+      "time_ms": 0,
+      "percentile": 100
     },
     "memory": {
-      "usage_mb": 17.9,
+      "usage_mb": 18.7,
+      "percentile": 66
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "2": {
+    "question_number": 2,
+    "question_name": "add-two-numbers",
+    "timestamp": "2025-04-15T22:04:06.040545",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3": {
+    "question_number": 3,
+    "question_name": "longest-substring-without-repeating-characters",
+    "timestamp": "2025-04-15T22:04:12.750836",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 19,
+      "percentile": 56
+    },
+    "memory": {
+      "usage_mb": 18.0,
       "percentile": 34
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "20": {
-    "question_number": 20,
-    "question_name": "valid-parentheses",
-    "timestamp": "2025-04-15T21:03:27.150242",
+  "4": {
+    "question_number": 4,
+    "question_name": "median-of-two-sorted-arrays",
+    "timestamp": "2025-04-15T22:04:21.566014",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
-      "time_ms": 0,
-      "percentile": 100
+      "time_ms": 3,
+      "percentile": 52
     },
     "memory": {
-      "usage_mb": 17.8,
-      "percentile": 80
+      "usage_mb": 18.3,
+      "percentile": 20
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "21": {
-    "question_number": 21,
-    "question_name": "merge-two-sorted-lists",
-    "timestamp": "2025-04-15T21:03:38.506884",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 0,
-      "percentile": 100
-    },
-    "memory": {
-      "usage_mb": 17.8,
-      "percentile": 38
-    },
+  "5": {
+    "question_number": 5,
+    "question_name": "longest-palindromic-substring",
+    "timestamp": "2025-04-15T22:04:27.123092",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
     "cases_passed": null,
     "total_cases": null
   }
