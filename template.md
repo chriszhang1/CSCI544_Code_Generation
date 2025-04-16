@@ -173,3 +173,41 @@
     "Test your solution with diverse inputs to verify correctness and efficiency."
   ]
 }
+```
+
+### Backtracking
+```json
+{
+  "category_specific_prompt": [
+    "Check if the problem involves exploring combinations, permutations, subsets, or constraint satisfaction, which are suitable for backtracking.",
+    "Define what a valid state looks like and how it represents progress toward the final solution.",
+    "Determine the available choices at each step and ensure they follow problem constraints.",
+    "Establish clear base cases to stop recursion and capture valid results.",
+    "Implement the recursive structure by making a choice, recursing, and undoing the choice to backtrack.",
+    "Use pruning to skip invalid or unnecessary branches early in the recursion.",
+    "Handle edge cases like empty input, duplicate elements, or situations where no solution exists.",
+    "Analyze the time complexity based on branching factor and recursion depth, typically exponential.",
+    "Test your solution on a range of inputs including base cases, duplicates, and edge scenarios.",
+    "Walk through a complete recursive path to verify that backtracking and result recording work as expected."
+  ]
+}
+```
+
+### Sort
+```json
+{
+  "category_specific_prompt": [
+    "Identify the nature of sorting required: full sort, partial sort, or custom order (e.g., lexicographic, frequency-based, tuple prioritization).",
+    "Choose the most appropriate sorting algorithm based on input size, constraints, and stability requirements.",
+    "If custom sorting is needed, define a comparator function that captures the required sorting logic.",
+    "Ensure sorting is applied to the correct data structure: arrays, tuples, objects, or nested collections.",
+    "Optimize for in-place sorting or minimal memory usage if space constraints are tight.",
+    "Handle duplicates, nulls, and edge cases like empty arrays or uniform values with care.",
+    "Analyze time complexity and space usage.",
+    "Verify that your sorting approach maintains any necessary invariants (e.g., relative order for stable sorts).",
+    "Implement and test the sorting logic on diverse examples: minimal, maximal, already sorted, reverse sorted, and randomly shuffled inputs.",
+    "Refactor and document the sorting logic clearly for readability and maintainability, especially if using custom comparators or multi-level sorting."
+  ]
+}
+```
+
