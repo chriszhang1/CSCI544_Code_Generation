@@ -36,6 +36,16 @@ class LeetCodeAPI:
     @staticmethod
     def get_function_signature(question_number):
         """Get function signature from template"""
+        # remove existing template file
+        template_file = LeetCodeAPI.get_template_file_path(question_number)
+        if template_file and os.path.exists(template_file):
+            try:
+                os.remove(template_file)
+                logging.info(f"Removed existing solution file: {template_file}")
+            except Exception as e:
+                logging.warning(f"Failed to remove existing file {template_file}: {e}")
+        
+        # get new template
         command = f"leetcode edit {question_number}"
         result = subprocess.run(command, shell=True, capture_output=True, text=True)
 
@@ -43,7 +53,7 @@ class LeetCodeAPI:
             logging.error(f"Error getting function signature: {result.stderr}")
             return None
 
-        template_file = LeetCodeAPI.get_template_file_path(question_number)
+
         if not template_file:
             return None
 
@@ -100,8 +110,11 @@ Your task is to provide ONLY the solution code, exactly matching the required fo
         try:
             with open("better_prompt.txt", "r") as f:
                 prompts["better"] = f.read().strip()
+                file_size = os.path.getsize("better_prompt.txt")
+                logging.info(f"Loaded better_prompt.txt (size: {file_size} bytes)")
         except FileNotFoundError:
             prompts["better"] = prompts["raw"]
+            logging.info("No better_prompt.txt found, using raw prompt")
         
         return prompts
     

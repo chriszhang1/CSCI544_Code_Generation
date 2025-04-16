@@ -15,6 +15,8 @@
       "   • Return a single Markdown ```python code block containing the submission‑ready code.",
       "   • The first ≤ 5 lines inside the block may hold concise comments summarizing the approach and Big‑O complexities.",
       "   • Do **not** write any prose or explanation before or after the code block.",
+      "5. Additional Instructions",
+      "   • If the problem signature provided contains predefined class which is commented out, assume it has been defined and DO NOT define it again.",
       "Failure to follow any rule above is considered an error."
     ],
     "prompts": {
