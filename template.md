@@ -211,3 +211,56 @@
 }
 ```
 
+### Stack
+```json
+{
+  "category_specific_prompt": [
+    "Identify if the problem involves nested structures, recent element tracking, or balanced sequences that benefit from a stack.",
+    "Define what each element in the stack represents and how it contributes to solving the problem.",
+    "Choose the appropriate type of stack: single, monotonic (increasing or decreasing), or custom object stack.",
+    "Determine when to push elements onto the stack and under what conditions to pop them.",
+    "Use the stack to maintain order, track previous states, or compare incoming values efficiently.",
+    "Handle edge cases like empty input, invalid sequences, or unmatched elements.",
+    "Optimize space usage by discarding unnecessary elements or compressing stack information when possible.",
+    "Analyze time and space complexity, ensuring stack operations are amortized O(1) where applicable.",
+    "Test on sample cases and additional inputs that stress stack depth, invalid patterns, or duplicate values.",
+    "Verify that the stack is updated and emptied correctly to reflect the intended logic of the problem."
+  ]
+}
+```
+
+### Bit Manipulation
+```json
+{
+  "category_specific_prompt": [
+    "Check if the problem involves binary representations, bit-level operations, or bitmasking strategies.",
+    "Identify the input and output types, and whether constraints allow efficient bitwise operations.",
+    "Determine which operations are required: AND, OR, XOR, NOT, shifts, or masking.",
+    "Use bitmasks when generating subsets, toggling flags, or encoding multiple states.",
+    "Apply common tricks such as x & (x - 1) to clear the lowest set bit or x & -x to isolate it.",
+    "Optimize space and runtime by leveraging the fixed bit width of integers (e.g., 32 or 64 bits).",
+    "Handle edge cases such as zero input, single set bits, all bits set, or negative values if signed integers are involved.",
+    "Analyze time complexity in terms of number of bits or operations (e.g., O(1), O(log n), or O(#bits)).",
+    "Test your solution with inputs like 0, 1, maximum integers, and binary edge patterns.",
+    "Trace through each bit operation manually for at least one test case to ensure correctness."
+  ]
+}
+```
+
+### Heap
+```json
+{
+  "category_specific_prompt": [
+    "Determine if the problem requires quick access to the minimum or maximum element, making a heap appropriate.",
+    "Identify whether a min-heap, max-heap, or custom comparator heap is needed based on the problem's goal.",
+    "Use Python’s `heapq` module for a min-heap and simulate a max-heap by pushing negated values if necessary.",
+    "If custom behavior is required, store tuples or objects in the heap and sort based on the desired priority.",
+    "Understand the role of the heap in the problem: is it for top-k elements, dynamic ordering, or merging streams?",
+    "Manage the heap size carefully if the problem involves tracking only the smallest or largest k elements.",
+    "Handle edge cases like empty input, duplicate values, or frequent insertions and removals efficiently.",
+    "Analyze time complexity of heap operations: O(log n) for push/pop, O(n) for heapify, and O(1) for peek.",
+    "Test with both small and large inputs to validate performance and correctness under stress.",
+    "Trace how the heap evolves during execution for one test case to ensure it maintains the correct invariants."
+  ]
+}
+```
