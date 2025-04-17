@@ -108,13 +108,14 @@ class LeetCodeFetcher:
         if not title_line:
             return None
             
-        # Extract title and number
+        # Extract title and clean it up
         title_match = re.match(r'^\[(\d+)\]\s*(.*)', title_line)
         if not title_match:
             return None
             
-        question_number = title_match.group(1)
         question_title = title_match.group(2).strip()
+        # Remove " is on the run..." suffix if present
+        question_title = re.sub(r'\s+is on the run\.\.\.$', '', question_title)
         
         # Get description (everything after title line)
         description_lines = []
@@ -131,7 +132,6 @@ class LeetCodeFetcher:
             return None
             
         return {
-            "question_number": question_number,
             "question_title": question_title,
             "question_description": description
         }
