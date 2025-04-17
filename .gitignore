@@ -33,5 +33,6 @@ wheels/
 # tests and results
 test/
 topic_classifier_model/
+model/
 leetcode_results.json
 leetcode_results.json

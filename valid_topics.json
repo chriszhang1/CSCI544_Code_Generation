@@ -1,0 +1,28 @@
+{
+  "topics": [
+    "Backtracking",
+    "Binary Search",
+    "Bit Manipulation",
+    "Breadth-first Search",
+    "Depth-first Search",
+    "Divide and Conquer",
+    "Dynamic Programming",
+    "Graph",
+    "Greedy",
+    "Hash Table",
+    "Heap",
+    "Linked List",
+    "Math",
+    "Ordered Map",
+    "Queue",
+    "Recursion",
+    "Segment Tree",
+    "Sliding Window",
+    "Sort",
+    "Stack",
+    "Tree",
+    "Trie",
+    "Two Pointers",
+    "Union Find"
+  ]
+}

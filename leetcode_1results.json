@@ -1131,5 +1131,16 @@
     "memory": null,
     "cases_passed": null,
     "total_cases": null
+  },
+  "2": {
+    "question_number": 2,
+    "question_name": "add-two-numbers",
+    "timestamp": "2025-04-15T22:09:41.372862",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
   }
 }
