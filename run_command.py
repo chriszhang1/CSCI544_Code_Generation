@@ -145,9 +145,7 @@ class GPTService:
         try:
             with open("raw_prompt.txt", "r") as f:
                 return f.read().strip()
-
         except FileNotFoundError:
-    # ===================== default prompt ================================================
             return """You are a Python coding assistant for LeetCode problems. 
 Your task is to provide ONLY the solution code, exactly matching the required format.
 - Do NOT include markdown formatting or code blocks
@@ -156,7 +154,6 @@ Your task is to provide ONLY the solution code, exactly matching the required fo
 - Match the function signature EXACTLY as provided
 - Ensure proper indentation
 - The code should be ready to run as-is"""
-    # ================================
 
     def get_solution(self, question, function_signature, prompt_type="raw", tags=None):
         """Get solution from GPT API using specified prompt"""
@@ -271,9 +268,8 @@ class ResultProcessor:
         return result
     
     @staticmethod
-    def save_test_results(question_number, results, predicted_tags=None):
+    def save_test_results(question_number, results, prompt_type="raw"):
         """Save test results to JSON file"""
-        results_file = f'leetcode_results_{prompt_type}.json'
         results_file = f'leetcode_results_{prompt_type}.json'
         
         all_results = {}
@@ -294,10 +290,6 @@ class ResultProcessor:
             **results
         }
         
-        # Add predicted tags if available
-        if predicted_tags:
-            result_entry['predicted_tags'] = list(predicted_tags)
-        
         all_results[str(question_number)] = result_entry
         
         try:
@@ -308,47 +300,6 @@ class ResultProcessor:
             return None
         
         return results_file
-
-    @staticmethod
-    def calculate_statistics(prompt_type="raw"):
-        """Calculate statistics from all test results"""
-        results_file = f'leetcode_results_{prompt_type}.json'
-        if not os.path.exists(results_file):
-            logging.error(f"Results file {results_file} not found")
-            return None
-
-        try:
-            with open(results_file, 'r') as f:
-                all_results = json.load(f)
-        except json.JSONDecodeError:
-            logging.error("Could not read results file")
-            return None
-
-        total_questions = len(all_results)
-        total_accuracy = 0
-        valid_accuracy_count = 0
-
-        for result in all_results.values():
-            if result.get('accuracy') is not None:
-                total_accuracy += result['accuracy']
-                valid_accuracy_count += 1
-
-        average_accuracy = round(total_accuracy / valid_accuracy_count, 2) if valid_accuracy_count > 0 else 0
-
-        statistics = {
-            "total_questions": total_questions,
-            "average_accuracy": average_accuracy
-        }
-
-        try:
-            stats_file = f'statistic_results_{prompt_type}.json'
-            with open(stats_file, 'w') as f:
-                json.dump(statistics, f, indent=2)
-            logging.info(f"Statistics saved to {stats_file}")
-            return statistics
-        except Exception as e:
-            logging.error(f"Could not save statistics: {e}")
-            return None
 
     @staticmethod
     def calculate_statistics(prompt_type="raw"):
