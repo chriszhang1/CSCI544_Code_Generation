@@ -1,0 +1,57 @@
+Good morning everyone,
+
+Slide 1: Title Slide
+Today, our group is excited to present our project: "Enhancing Code Generation Accuracy Through Classification and Tailored Prompt Engineering." I'm He Sui, presenting alongside Chunxuan Zhao, Yuanhao Chai, Matthew Lu, and Taiyuan Zhang.
+
+Slide 2: Motivation
+Our goal is to significantly enhance code generation accuracy by using advanced prompt engineering. We believe that general prompts often don't fully address the specific algorithmic demands of individual problems. By tailoring prompts according to problem types, we can guide models toward more accurate and relevant outputs.
+
+Slide 3: Problem Definition
+We tackled three main challenges:
+
+Problem Classification – categorizing problems effectively based on their algorithmic characteristics.
+
+Prompt Tailoring – creating specialized prompts aligned with specific algorithmic patterns.
+
+Evaluating Model Output – developing automated evaluation to assess solution performance more efficiently.
+
+Slide 4: Solution Overview
+Here's our end-to-end approach:
+
+Input raw code problems from LeetCode.
+
+Automatically classify problems to identify relevant algorithmic tags.
+
+Generate tailored prompts based on identified tags.
+
+Submit the final prompts to GPT-4o Mini.
+
+Evaluate generated solutions using the LeetCode platform.
+
+Slide 5: Automatic Problem Classification
+We aimed to automatically identify the algorithmic category of a programming problem based solely on its textual description. We achieved this by fine-tuning the DeepSeek‑R1‑Distill‑Llama‑8B model, using prompt-based instruction tuning to generate accurate problem tags as natural-language responses.
+
+Slide 6: Current Tags
+We currently classify problems into categories like Dynamic Programming, Math, Tree, Depth-first Search, Greedy, Hash Table, Binary Search, and several others. Each category corresponds to distinct algorithmic approaches and problem-solving strategies.
+
+Slide 7: Tag-based Prompt Generation
+Our next step was creating specialized prompts tailored to each identified category. These prompts clearly highlight essential constraints, describe precise input/output formats, outline common pitfalls, and encourage structured, step-by-step reasoning. This allows us to inject critical domain-specific knowledge directly into the model's reasoning process.
+
+Slide 8: Automatic Prompt Evaluation
+To verify the effectiveness of category-specific prompts, we designed a systematic evaluation process:
+
+Use leetcode-cli to fetch problems.
+
+Classify each problem.
+
+Generate two sets of prompts: a raw version and a category-specific version.
+
+Submit both prompts to GPT-4o Mini, then evaluate the resulting solutions on LeetCode.
+
+Slide 9: Results
+Our classification accuracy for single-tag categories was strong, with notable performances such as 97.44% accuracy in Tree problems and over 80% for categories like Two Pointers, String, and Hash Table. Although our automated evaluation system is still being finalized, manual evaluations indicate that tailored prompts substantially improve solution accuracy compared to raw prompts.
+
+Slide 10: Closing
+In summary, combining automatic classification with tailored prompt engineering significantly enhances code generation accuracy. We look forward to fully automating our evaluation pipeline soon.
+
+Thank you very much, and we welcome any questions you may have.
