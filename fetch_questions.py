@@ -5,6 +5,7 @@ import logging
 import re
 import glob
 from typing import Optional, Dict, Any
+import time
 
 class LeetCodeFetcher:
     def __init__(self):
@@ -27,11 +28,11 @@ class LeetCodeFetcher:
         Returns:
             Path to the template file, or None if not found
         """
-        template_path = os.path.expanduser(f"~/.leetcode/code/{question_number}.*")
+        # First try to find the exact file pattern: number.title.py
+        template_path = os.path.expanduser(f"~/.leetcode/code/{question_number}.*.py")
         template_files = glob.glob(template_path)
         
         if not template_files:
-            logging.warning(f"No template file found for question {question_number}")
             return None
         return template_files[0]
 
@@ -66,7 +67,12 @@ class LeetCodeFetcher:
             # Read the template file
             template_file = self._get_template_file_path(question_number)
             if not template_file:
-                return None
+                # Try to find the template file again after a short delay
+                time.sleep(0.5)  # Give the leetcode-cli some time to create the file
+                template_file = self._get_template_file_path(question_number)
+                if not template_file:
+                    logging.error(f"Could not find template file for question {question_number}")
+                    return None
                 
             with open(template_file, 'r') as f:
                 return f.read()
@@ -89,28 +95,44 @@ class LeetCodeFetcher:
             return None
             
         lines = content.strip().split('\n')
-        run_line_index = -1
-        for i, line in enumerate(lines):
-            if "is on the run..." in line:
-                run_line_index = i
-                break
-                
-        if run_line_index == -1:
+        if not lines:
             return None
             
-        # Extract title from the line before "is on the run..."
-        title_line = lines[run_line_index - 1] if run_line_index > 0 else ""
-        title_match = re.search(r'\[(\d+)\]\s*(.*)', title_line)
+        # Find the title line (first line with [number])
+        title_line = None
+        for line in lines:
+            if re.match(r'^\[\d+\]', line):
+                title_line = line
+                break
+                
+        if not title_line:
+            return None
+            
+        # Extract title and number
+        title_match = re.match(r'^\[(\d+)\]\s*(.*)', title_line)
         if not title_match:
             return None
             
-        # Get description (everything after "is on the run...")
-        description = '\n'.join(lines[run_line_index + 1:]).strip()
+        question_number = title_match.group(1)
+        question_title = title_match.group(2).strip()
+        
+        # Get description (everything after title line)
+        description_lines = []
+        found_title = False
+        
+        for line in lines:
+            if found_title:
+                description_lines.append(line)
+            elif line == title_line:
+                found_title = True
+                
+        description = '\n'.join(description_lines).strip()
         if not description:
             return None
             
         return {
-            "question_title": title_match.group(2).strip(),
+            "question_number": question_number,
+            "question_title": question_title,
             "question_description": description
         }
 
