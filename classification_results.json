@@ -1,0 +1,530 @@
+{
+  "3100": {
+    "categories": [
+      "Dynamic Programming",
+      "Greedy"
+    ]
+  },
+  "3101": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3102": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3104": {
+    "categories": [
+      "Dynamic Programming",
+      "Hash Table"
+    ]
+  },
+  "3105": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3106": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3107": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3108": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3109": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3110": {
+    "categories": [
+      "Two Pointers",
+      "No second match found"
+    ]
+  },
+  "3111": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3112": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3113": {
+    "categories": [
+      "Dynamic Programming",
+      "Two Pointers"
+    ]
+  },
+  "3114": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3115": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3116": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3117": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3119": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3120": {
+    "categories": [
+      "Hash Table",
+      "Bit Manipulation"
+    ]
+  },
+  "3121": {
+    "categories": [
+      "Hash Table",
+      "Two Pointers"
+    ]
+  },
+  "3122": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3123": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3125": {
+    "categories": [
+      "Binary Search",
+      "Bit Manipulation"
+    ]
+  },
+  "3127": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3128": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3129": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3130": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3131": {
+    "categories": [
+      "Hash Table",
+      "Two Pointers"
+    ]
+  },
+  "3132": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3133": {
+    "categories": [
+      "Binary Search",
+      "Bit Manipulation"
+    ]
+  },
+  "3134": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3135": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3136": {
+    "categories": [
+      "String.\n\nThe problem difficulty is: Medium.\n\nThe problem tags are: String, Check Conditions, Constraints",
+      "No match found"
+    ]
+  },
+  "3137": {
+    "categories": [
+      "Dynamic Programming",
+      "Sliding Window"
+    ]
+  },
+  "3138": {
+    "categories": [
+      "Hash Table",
+      "Sliding Window"
+    ]
+  },
+  "3139": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3141": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3142": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3143": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3144": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3145": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3146": {
+    "categories": [
+      "Hash Table",
+      "No second match found"
+    ]
+  },
+  "3147": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3148": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3149": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3151": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3152": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3153": {
+    "categories": [
+      "Math",
+      "Hash Table"
+    ]
+  },
+  "3154": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3155": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3157": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3158": {
+    "categories": [
+      "Hash Table",
+      "Bit Manipulation"
+    ]
+  },
+  "3159": {
+    "categories": [
+      "Hash Table",
+      "No second match found"
+    ]
+  },
+  "3160": {
+    "categories": [
+      "Hash Table",
+      "Bit Manipulation"
+    ]
+  },
+  "3161": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3162": {
+    "categories": [
+      "Dynamic Programming",
+      "Hash Table"
+    ]
+  },
+  "3163": {
+    "categories": [
+      "String.\n\nThe problem difficulty is: Medium.\n\nThe problem tags are: String, Compressed String.",
+      "No match found"
+    ]
+  },
+  "3164": {
+    "categories": [
+      "Dynamic Programming",
+      "Hash Table"
+    ]
+  },
+  "3165": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3167": {
+    "categories": [
+      "Hash Table",
+      "Sort"
+    ]
+  },
+  "3168": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3169": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3170": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3171": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3173": {
+    "categories": [
+      "Bit Manipulation",
+      "No second match found"
+    ]
+  },
+  "3174": {
+    "categories": [
+      "Two Pointers",
+      "No second match found"
+    ]
+  },
+  "3175": {
+    "categories": [
+      "Dynamic Programming",
+      "Linked List"
+    ]
+  },
+  "3176": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3177": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3178": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3179": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3180": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3181": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3183": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3184": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3185": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3186": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3187": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3189": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3190": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3191": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3192": {
+    "categories": [
+      "Dynamic Programming",
+      "Bit Manipulation"
+    ]
+  },
+  "3193": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3194": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3195": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3196": {
+    "categories": [
+      "Dynamic Programming",
+      "No second match found"
+    ]
+  },
+  "3197": {
+    "categories": [
+      "Dynamic Programming",
+      "Math"
+    ]
+  },
+  "3199": {
+    "categories": [
+      "Bit Manipulation",
+      "No second match found"
+    ]
+  }
+}
