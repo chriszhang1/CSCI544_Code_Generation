@@ -10,6 +10,38 @@ from run_command import GPTService, ResultProcessor, FileHandler
 # Load environment variables from .env file
 load_dotenv()
 
+def test_gpt_api():
+    """Test GPT API connection with a simple prompt"""
+    try:
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key:
+            logging.error("OPENAI_API_KEY not found in environment variables")
+            return False
+            
+        logging.info("Testing GPT API connection...")
+        gpt_service = GPTService(api_key)
+        
+        # Simple test prompt
+        test_prompt = "What is 2+2?"
+        test_signature = "def add(a: int, b: int) -> int:"
+        
+        logging.info("\n=== Test Prompt ===")
+        logging.info(f"Question: {test_prompt}")
+        logging.info(f"Function Signature: {test_signature}")
+        logging.info("==================\n")
+        
+        response = gpt_service.get_solution(test_prompt, test_signature)
+        if response:
+            logging.info("✅ GPT API connection successful")
+            return True
+        else:
+            logging.error("❌ GPT API connection failed - no response received")
+            return False
+            
+    except Exception as e:
+        logging.error(f"❌ GPT API connection failed: {str(e)}")
+        return False
+
 class QuestionLoader:
     def __init__(self, questions_file="questions.json"):
         self.questions_file = questions_file
@@ -81,30 +113,28 @@ class EnhancedLeetCodeSolver:
         template_content = self.template_handler.get_template_content(categories)
         
         # Build enhanced prompt
-        system_prompt = """You are a Python coding assistant for LeetCode problems. 
-Consider solving the problem using one or both of the following approaches: {categories}
+        prompt = f"""Consider solving the problem using one or both of the following approaches: {", ".join(categories)}
 
 {template_content}
 
-Your task is to provide ONLY the solution code, exactly matching the required format.
-- Do NOT include markdown formatting or code blocks
-- Do NOT include any explanations or comments
-- Include ONLY the necessary imports and the Solution class
-- Match the function signature EXACTLY as provided
-- Ensure proper indentation
-- The code should be ready to run as-is"""
+Question:
+{question}
 
-        system_prompt = system_prompt.format(
-            categories=", ".join(categories),
-            template_content=template_content
-        )
+Function Signature:
+{function_signature}
 
+Provide ONLY the solution code."""
+        
+        # Print the prompt before sending
+        print("\n=== Generated Prompt ===")
+        print(prompt)
+        print("======================\n")
+        
         # Get solution from GPT
         print("Getting solution from GPT...")
         solution = self.gpt_service.get_solution(
             question,
-            function_signature,
-            system_prompt=system_prompt
+            function_signature
         )
         
         if not solution:
@@ -159,6 +189,11 @@ def main():
         level=logging.INFO,
         format="%(levelname)s: %(message)s"
     )
+
+    # Test GPT API first
+    if not test_gpt_api():
+        logging.error("Cannot proceed without working GPT API connection")
+        return
 
     solver = EnhancedLeetCodeSolver()
     question_loader = QuestionLoader()
