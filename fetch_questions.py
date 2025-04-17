@@ -2,6 +2,8 @@ import subprocess
 import os
 import json
 import logging
+import re
+import glob
 from typing import Optional, Dict, Any
 
 class LeetCodeFetcher:
@@ -15,7 +17,104 @@ class LeetCodeFetcher:
             format='%(asctime)s - %(levelname)s - %(message)s'
         )
 
-    def fetch_question(self, question_number: int) -> Optional[str]:
+    def _get_template_file_path(self, question_number: int) -> Optional[str]:
+        """
+        Get path to template file
+        
+        Args:
+            question_number: The LeetCode question number
+            
+        Returns:
+            Path to the template file, or None if not found
+        """
+        template_path = os.path.expanduser(f"~/.leetcode/code/{question_number}.*")
+        template_files = glob.glob(template_path)
+        
+        if not template_files:
+            logging.warning(f"No template file found for question {question_number}")
+            return None
+        return template_files[0]
+
+    def _get_function_signature(self, question_number: int) -> Optional[str]:
+        """
+        Get the function signature from template file
+        
+        Args:
+            question_number: The LeetCode question number
+            
+        Returns:
+            The function signature as a string, or None if failed
+        """
+        try:
+            # Remove existing template file if it exists
+            template_file = self._get_template_file_path(question_number)
+            if template_file and os.path.exists(template_file):
+                try:
+                    os.remove(template_file)
+                    logging.info(f"Removed existing solution file: {template_file}")
+                except Exception as e:
+                    logging.warning(f"Failed to remove existing file {template_file}: {e}")
+            
+            # Get new template
+            command = f"leetcode edit {question_number}"
+            result = subprocess.run(command, shell=True, capture_output=True, text=True)
+            
+            if result.returncode != 0:
+                logging.error(f"Error getting function signature: {result.stderr}")
+                return None
+                
+            # Read the template file
+            template_file = self._get_template_file_path(question_number)
+            if not template_file:
+                return None
+                
+            with open(template_file, 'r') as f:
+                return f.read()
+                
+        except Exception as e:
+            logging.error(f"Exception while getting function signature for question {question_number}: {str(e)}")
+            return None
+
+    def _parse_question_content(self, content: str) -> Optional[Dict[str, str]]:
+        """
+        Parse the question content into title and description
+        
+        Args:
+            content: The raw question content
+            
+        Returns:
+            Dictionary with title and description, or None if invalid
+        """
+        if not content:
+            return None
+            
+        lines = content.strip().split('\n')
+        run_line_index = -1
+        for i, line in enumerate(lines):
+            if "is on the run..." in line:
+                run_line_index = i
+                break
+                
+        if run_line_index == -1:
+            return None
+            
+        # Extract title from the line before "is on the run..."
+        title_line = lines[run_line_index - 1] if run_line_index > 0 else ""
+        title_match = re.search(r'\[(\d+)\]\s*(.*)', title_line)
+        if not title_match:
+            return None
+            
+        # Get description (everything after "is on the run...")
+        description = '\n'.join(lines[run_line_index + 1:]).strip()
+        if not description:
+            return None
+            
+        return {
+            "question_title": title_match.group(2).strip(),
+            "question_description": description
+        }
+
+    def fetch_question(self, question_number: int) -> Optional[Dict[str, str]]:
         """
         Fetch a single LeetCode question using leetcode-cli
         
@@ -23,7 +122,7 @@ class LeetCodeFetcher:
             question_number: The LeetCode question number
             
         Returns:
-            The question content as a string, or None if failed
+            Dictionary containing question details, or None if failed
         """
         try:
             logging.info(f"Fetching question {question_number}...")
@@ -34,12 +133,27 @@ class LeetCodeFetcher:
                 logging.error(f"Error fetching question {question_number}: {result.stderr}")
                 return None
 
-            return result.stdout
+            content = result.stdout.strip()
+            question_details = self._parse_question_content(content)
+            
+            if not question_details:
+                logging.warning(f"Question {question_number} has invalid or empty content")
+                return None
+                
+            # Get function signature
+            function_signature = self._get_function_signature(question_number)
+            if function_signature:
+                question_details["function_signature"] = function_signature
+            else:
+                logging.warning(f"Could not get function signature for question {question_number}")
+                return None
+
+            return question_details
         except Exception as e:
             logging.error(f"Exception while fetching question {question_number}: {str(e)}")
             return None
 
-    def fetch_questions(self, start: int, end: int) -> Dict[int, str]:
+    def fetch_questions(self, start: int, end: int) -> Dict[int, Dict[str, str]]:
         """
         Fetch multiple LeetCode questions
         
@@ -48,24 +162,24 @@ class LeetCodeFetcher:
             end: Ending question number
             
         Returns:
-            Dictionary mapping question numbers to their content
+            Dictionary mapping question numbers to their details
         """
         questions = {}
         for i in range(start, end + 1):
-            content = self.fetch_question(i)
-            if content:
-                questions[i] = content
+            details = self.fetch_question(i)
+            if details:
+                questions[i] = details
                 logging.info(f"Successfully fetched question {i}")
             else:
                 logging.warning(f"Failed to fetch question {i}")
         return questions
 
-    def save_questions(self, questions: Dict[int, str], output_file: str = "questions.json") -> None:
+    def save_questions(self, questions: Dict[int, Dict[str, str]], output_file: str = "questions.json") -> None:
         """
         Save fetched questions to a JSON file
         
         Args:
-            questions: Dictionary of question numbers to content
+            questions: Dictionary of question numbers to details
             output_file: Path to the output JSON file
         """
         try:
