@@ -4,7 +4,6 @@ import json
 import argparse
 import logging
 from dotenv import load_dotenv
-from deepseek import ProblemClassifier
 from run_command import GPTService, ResultProcessor, FileHandler
 
 # Load environment variables from .env file
@@ -60,6 +59,54 @@ class QuestionLoader:
         """Get question details from loaded questions"""
         return self.questions.get(str(question_number))
 
+class ClassificationLoader:
+    def __init__(self, classification_file="classification_results.json"):
+        self.classification_file = classification_file
+        self.classifications = self._load_classifications()
+        # List of valid categories (from LeetCode's standard categories)
+        self.valid_categories = {
+            "Dynamic Programming", "Math", "Tree", "Depth-first Search", "Greedy",
+            "Hash Table", "Binary Search", "Breadth-first Search", "Sort",
+            "Two Pointers", "Backtracking", "Stack", "Graph", "Bit Manipulation",
+            "Heap", "Linked List", "Recursion", "Union Find", "Sliding Window",
+            "Trie", "Divide and Conquer", "Segment Tree", "Ordered Map", "Queue",
+            "String", "Array", "Binary Tree", "Matrix", "Design"
+        }
+
+    def _load_classifications(self):
+        """Load classifications from JSON file"""
+        try:
+            with open(self.classification_file, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            logging.error(f"Error loading classifications from {self.classification_file}: {e}")
+            return {}
+
+    def _is_valid_category(self, category):
+        """Check if a category is valid"""
+        if not category or not isinstance(category, str):
+            return False
+        # Check if it's a standard LeetCode category
+        return category in self.valid_categories
+
+    def get_categories(self, question_number):
+        """Get categories for a question, filtering out invalid ones"""
+        raw_categories = self.classifications.get(str(question_number), {}).get("categories", [])
+        
+        # Filter out invalid categories
+        valid_categories = [cat for cat in raw_categories if self._is_valid_category(cat)]
+        
+        # If we have at least one valid category, use it
+        if valid_categories:
+            # If we only have one valid category, use a default second category
+            if len(valid_categories) == 1:
+                return [valid_categories[0], "General"]
+            # If we have two or more valid categories, use the first two
+            return valid_categories[:2]
+        
+        # If no valid categories found, use defaults
+        return ["General", "Algorithm"]
+
 class TemplateHandler:
     def __init__(self, templates_dir="templates"):
         self.templates_dir = templates_dir
@@ -85,9 +132,9 @@ class TemplateHandler:
 
 class EnhancedLeetCodeSolver:
     def __init__(self):
-        self.classifier = ProblemClassifier()
         self.template_handler = TemplateHandler()
         self.question_loader = QuestionLoader()
+        self.classification_loader = ClassificationLoader()
         self.gpt_service = GPTService(os.getenv('OPENAI_API_KEY'))
 
     def solve_question(self, question_number):
@@ -104,10 +151,9 @@ class EnhancedLeetCodeSolver:
         question = f"{question_data['question_title']}\n\n{question_data['question_description']}"
         function_signature = question_data['function_signature']
 
-        # Classify the problem
-        print("Classifying problem...")
-        categories = self.classifier.classify(question)
-        print(f"Predicted categories: {categories[0]}, {categories[1]}")
+        # Get pre-classified categories
+        categories = self.classification_loader.get_categories(question_number)
+        print(f"Using pre-classified categories: {categories[0]}, {categories[1]}")
 
         # Get relevant templates
         template_content = self.template_handler.get_template_content(categories)
