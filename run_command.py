@@ -10,6 +10,9 @@ import json
 import datetime
 import logging
 
+# Import the TagPredictor from separate module
+from tag_predictor import TagPredictor
+
 class LeetCodeAPI:
     @staticmethod
     def get_question(question_number):
@@ -53,7 +56,7 @@ class LeetCodeAPI:
             logging.error(f"Error getting function signature: {result.stderr}")
             return None
 
-
+        template_file = LeetCodeAPI.get_template_file_path(question_number)
         if not template_file:
             return None
 
@@ -86,19 +89,66 @@ class LeetCodeAPI:
                 return match.group(1)
         return None
 
+class PromptBuilder:
+    """Builds custom prompts using predicted tags"""
+    
+    def __init__(self, all_tags_file="alltp.json"):
+        self.prompt_data = self._load_prompt_data(all_tags_file)
+    
+    def _load_prompt_data(self, file_path):
+        """Load prompt data from JSON file"""
+        try:
+            with open(file_path, 'r') as f:
+                data = json.load(f)
+                return data
+        except Exception as e:
+            logging.error(f"Error loading prompt data from {file_path}: {e}")
+            return {"main_prompt": [], "prompts": {}}
+    
+    def build_system_prompt(self):
+        """Build system prompt from main prompt"""
+        if not self.prompt_data or not self.prompt_data.get("main_prompt"):
+            return "You are a Python coding assistant for LeetCode problems."
+        
+        return "\n".join(self.prompt_data.get("main_prompt", []))
+    
+    def build_tag_specific_content(self, tags):
+        """Build content for specific tags"""
+        if not tags or not self.prompt_data or not self.prompt_data.get("prompts"):
+            return ""
+        
+        tag_contents = []
+        
+        for tag in tags:
+            if tag in self.prompt_data["prompts"]:
+                tag_content = "\n".join(self.prompt_data["prompts"][tag])
+                tag_contents.append(f"## {tag.replace('_', ' ').title()} Protocol:\n{tag_content}")
+        
+        if not tag_contents:
+            return ""
+            
+        return "\n\n".join([
+            "# Tag-Specific Protocols",
+            "Apply these specific protocols based on the problem characteristics:",
+            "\n\n".join(tag_contents)
+        ])
+
 class GPTService:
     def __init__(self, api_key):
         self.client = OpenAI(api_key=api_key)
-        self.prompts = self._load_prompts()
+        self.raw_prompt = self._load_raw_prompt()
+
+        self.prompt_builder = PromptBuilder()
     
-    def _load_prompts(self):
-        """Load prompts from files"""
-        prompts = {}
+    def _load_raw_prompt(self):
+        """Load raw prompt from file"""
         try:
             with open("raw_prompt.txt", "r") as f:
-                prompts["raw"] = f.read().strip()
+                return f.read().strip()
+
         except FileNotFoundError:
-            prompts["raw"] = """You are a Python coding assistant for LeetCode problems. 
+    # ===================== default prompt ================================================
+            return """You are a Python coding assistant for LeetCode problems. 
 Your task is to provide ONLY the solution code, exactly matching the required format.
 - Do NOT include markdown formatting or code blocks
 - Do NOT include any explanations or comments
@@ -106,38 +156,31 @@ Your task is to provide ONLY the solution code, exactly matching the required fo
 - Match the function signature EXACTLY as provided
 - Ensure proper indentation
 - The code should be ready to run as-is"""
-        
-        try:
-            with open("better_prompt.txt", "r") as f:
-                prompts["better"] = f.read().strip()
-                file_size = os.path.getsize("better_prompt.txt")
-                logging.info(f"Loaded better_prompt.txt (size: {file_size} bytes)")
-        except FileNotFoundError:
-            prompts["better"] = prompts["raw"]
-            logging.info("No better_prompt.txt found, using raw prompt")
-        
-        return prompts
-    
-    def get_solution(self, question, function_signature, prompt_type="raw"):
+    # ================================
+
+    def get_solution(self, question, function_signature, prompt_type="raw", tags=None):
         """Get solution from GPT API using specified prompt"""
         try:
-            system_content = self.prompts.get(prompt_type, self.prompts["raw"])
+            # Use different approaches based on prompt type
+            if prompt_type == "raw":
+                system_content = self.raw_prompt
+                user_content = self._build_base_user_prompt(function_signature, question)
+            elif prompt_type == "tags":
+                # Use tag-based prompting
+                system_content = self.prompt_builder.build_system_prompt()
+                tag_content = self.prompt_builder.build_tag_specific_content(tags)
+                user_content = self._build_tag_user_prompt(function_signature, question, tag_content)
+            else:
+                # Default to raw prompt
+                system_content = self.raw_prompt
+                user_content = self._build_base_user_prompt(function_signature, question)
             
+            # Call the API
             response = self.client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": system_content},
-                    {"role": "user", "content": f"""
-                                                Generate a Python solution for this LeetCode question.
-                                                Use this exact function signature and format:
-
-                                                {function_signature}
-
-                                                Question:
-                                                {question}
-
-                                                Provide ONLY the solution code."""
-                    }
+                    {"role": "user", "content": user_content}
                 ],
                 temperature=0.7
             )
@@ -146,6 +189,32 @@ Your task is to provide ONLY the solution code, exactly matching the required fo
         except Exception as e:
             logging.error(f"Error calling GPT API: {e}")
             return None
+    
+    def _build_base_user_prompt(self, function_signature, question):
+        """Build basic user prompt"""
+        return f"""
+Generate a Python solution for this LeetCode question.
+Use this exact function signature and format:
+
+{function_signature}
+
+Question:
+{question}
+
+Provide ONLY the solution code."""
+    
+    def _build_tag_user_prompt(self, function_signature, question, tag_content):
+        """Build tag-enhanced user prompt"""
+        base_prompt = self._build_base_user_prompt(function_signature, question)
+        
+        if tag_content:
+            return f"""
+{tag_content}
+
+{base_prompt}
+"""
+        else:
+            return base_prompt
     
     @staticmethod
     def _clean_code_output(code):
@@ -202,7 +271,7 @@ class ResultProcessor:
         return result
     
     @staticmethod
-    def save_test_results(question_number, results):
+    def save_test_results(question_number, results, predicted_tags=None):
         """Save test results to JSON file"""
         results_file = 'leetcode_results.json'
         
@@ -217,12 +286,18 @@ class ResultProcessor:
                 logging.warning("Could not read existing results file. Creating new one.")
         
         question_name = LeetCodeAPI.get_question_name(question_number)
-        all_results[str(question_number)] = {
+        result_entry = {
             'question_number': question_number,
             'question_name': question_name,
             'timestamp': datetime.datetime.now().isoformat(),
             **results
         }
+        
+        # Add predicted tags if available
+        if predicted_tags:
+            result_entry['predicted_tags'] = list(predicted_tags)
+        
+        all_results[str(question_number)] = result_entry
         
         try:
             with open(results_file, 'w') as f:
@@ -247,7 +322,7 @@ class FileHandler:
         return False
 
 class LeetCodeSolver:
-    def __init__(self, prompt_type="raw"):
+    def __init__(self, prompt_type="raw", prediction_method="gpt"):
         load_dotenv()
         api_key = os.getenv('OPENAI_API_KEY')
         if not api_key:
@@ -256,8 +331,10 @@ class LeetCodeSolver:
         
         self.gpt_service = GPTService(api_key)
         self.prompt_type = prompt_type
+        self.predicted_tags = None
+        self.prediction_method = prediction_method
+        self.tag_predictor = TagPredictor(api_key=api_key, prediction_method=prediction_method)
 
-    # solving question
     def solve_question(self, question_number):
         """Solve a single LeetCode question"""
         logging.info(f"Processing question {question_number}...")
@@ -273,9 +350,21 @@ class LeetCodeSolver:
             logging.error("Failed to get function signature")
             return False
         
+        # Predict tags if using tag-based prompt
+        if self.prompt_type == "tags":
+            logging.info(f"Predicting problem tags using {self.prediction_method}...")
+            self.predicted_tags = self.tag_predictor.predict_tags(question)
+            if self.predicted_tags:
+                logging.info(f"Predicted tags: {', '.join(self.predicted_tags)}")
+        
         # Get solution from GPT
         logging.info(f"Getting solution using {self.prompt_type} prompt...")
-        solution = self.gpt_service.get_solution(question, function_signature, self.prompt_type)
+        solution = self.gpt_service.get_solution(
+            question, 
+            function_signature, 
+            self.prompt_type,
+            self.predicted_tags
+        )
         if not solution:
             logging.error("Failed to get solution from GPT")
             return False
@@ -289,7 +378,11 @@ class LeetCodeSolver:
         test_results = ResultProcessor.process_test_results(test_output['stdout'], test_output['stderr'])
         
         # Save and display results
-        results_file = ResultProcessor.save_test_results(question_number, test_results)
+        results_file = ResultProcessor.save_test_results(
+            question_number, 
+            test_results,
+            self.predicted_tags
+        )
         self._display_results(test_results, test_output['stderr'], results_file)
         
         return True
@@ -314,14 +407,20 @@ class LeetCodeSolver:
         if stderr:
             logging.error("Errors encountered:")
             logging.error(stderr)
+        
+        # Display predicted tags if available
+        if self.predicted_tags:
+            logging.info(f"Tags: {', '.join(self.predicted_tags)}")
 
 def main():
     # Configure argument parser
     parser = argparse.ArgumentParser(description="Solve LeetCode problems using GPT")
     parser.add_argument("start", type=int, help="Starting problem number")
     parser.add_argument("end", type=int, nargs="?", help="Ending problem number (optional)")
-    parser.add_argument("--prompt", "-p", type=str, default="raw", choices=["raw", "better"], 
-                        help="Type of prompt to use (raw or better)")
+    parser.add_argument("--prompt", "-p", type=str, default="raw", choices=["raw", "tags"], 
+                        help="Type of prompt to use (raw or tags)")
+    parser.add_argument("--prediction", type=str, default="gpt", choices=["gpt", "bert"],
+                        help="Tag prediction method to use")
     parser.add_argument("--log-level", type=str, default="INFO", 
                         choices=["DEBUG", "INFO", "WARNING", "ERROR"],
                         help="Set logging level")
@@ -337,7 +436,7 @@ def main():
     start_question = args.start
     end_question = args.end if args.end else start_question
 
-    solver = LeetCodeSolver(prompt_type=args.prompt)
+    solver = LeetCodeSolver(prompt_type=args.prompt, prediction_method=args.prediction)
 
     for i in range(start_question, end_question + 1):
         logging.info(f"====== Solving Question {i} ======")
