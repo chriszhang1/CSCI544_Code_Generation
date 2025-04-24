@@ -96,38 +96,47 @@ class ClassificationLoader:
         # Filter out invalid categories
         valid_categories = [cat for cat in raw_categories if self._is_valid_category(cat)]
         
-        # If we have at least one valid category, use it
+        # Return valid categories if any exist
         if valid_categories:
-            # If we only have one valid category, use a default second category
+            # If we only have one valid category, use it
             if len(valid_categories) == 1:
-                return [valid_categories[0], "General"]
+                return [valid_categories[0]]
             # If we have two or more valid categories, use the first two
             return valid_categories[:2]
         
-        # If no valid categories found, use defaults
-        return ["General", "Algorithm"]
+        # If no valid categories found, return empty list
+        return []
 
 class TemplateHandler:
-    def __init__(self, templates_dir="templates"):
-        self.templates_dir = templates_dir
+    def __init__(self, templates_file="alltp.json"):
+        self.templates_file = templates_file
         self.templates = self._load_templates()
 
     def _load_templates(self):
-        """Load all template files from the templates directory"""
-        templates = {}
-        for filename in os.listdir(self.templates_dir):
-            if filename.endswith('.md'):
-                category = filename[:-3]  # Remove .md extension
-                with open(os.path.join(self.templates_dir, filename), 'r', encoding='utf-8') as f:
-                    templates[category] = f.read()
-        return templates
+        """Load all templates from the JSON file"""
+        try:
+            with open(self.templates_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                return data.get('prompts', {})
+        except Exception as e:
+            logging.error(f"Error loading templates from {self.templates_file}: {e}")
+            return {}
+
+    def _normalize_category(self, category):
+        """Convert category name to template key format"""
+        # Convert to lowercase and replace spaces with underscores
+        return category.lower().replace(" ", "_").replace("-", "_")
 
     def get_template_content(self, categories):
         """Get template content for given categories"""
         template_content = []
         for category in categories:
-            if category in self.templates:
-                template_content.append(f"## {category} Template:\n{self.templates[category]}")
+            # Normalize the category name to match template keys
+            template_key = self._normalize_category(category)
+            if template_key in self.templates:
+                template = self.templates[template_key]
+                # Format the template content
+                template_content.append(f"## {category}:\n" + "\n".join(template))
         return "\n\n".join(template_content)
 
 class EnhancedLeetCodeSolver:
@@ -138,6 +147,19 @@ class EnhancedLeetCodeSolver:
         self.template_handler = TemplateHandler()
         self.question_loader = QuestionLoader()
         self.classification_loader = ClassificationLoader()
+        self.main_prompt, self.prompt_ending = self._load_prompts()
+
+    def _load_prompts(self):
+        """Load the main prompt and prompt ending from alltp.json"""
+        try:
+            with open("alltp.json", 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                main_prompt = "\n".join(data.get('main_prompt', []))
+                prompt_ending = "\n".join(data.get('prompt_ending', []))
+                return main_prompt, prompt_ending
+        except Exception as e:
+            logging.error(f"Error loading prompts from alltp.json: {e}")
+            return "", ""
 
     def solve_question(self, question_number):
         """Solve a single LeetCode question with enhanced template-based prompting"""
@@ -155,23 +177,32 @@ class EnhancedLeetCodeSolver:
 
         # Get pre-classified categories
         categories = self.classification_loader.get_categories(question_number)
-        print(f"Using pre-classified categories: {categories[0]}, {categories[1]}")
+        if categories:
+            print(f"Using pre-classified categories: {', '.join(categories)}")
+        else:
+            print("No valid categories detected for this question")
 
         # Get relevant templates
         template_content = self.template_handler.get_template_content(categories)
         
         # Build enhanced prompt
-        prompt = f"""Consider solving the problem using one or both of the following approaches: {", ".join(categories)}
-
-{template_content}
-
-Question:
-{question}
-
-Function Signature:
-{function_signature}
-
-Provide ONLY the solution code."""
+        prompt_parts = [self.main_prompt]
+        
+        # Only add category line if we have valid categories
+        if categories:
+            prompt_parts.append(f"Consider solving the problem using one or both of the following approaches: {', '.join(categories)}")
+        
+        if template_content:
+            prompt_parts.append(template_content)
+            
+        prompt_parts.extend([
+            f"Question:\n{question}",
+            f"Function Signature:\n{function_signature}",
+            self.prompt_ending,
+            "Provide ONLY the solution code."
+        ])
+        
+        prompt = "\n\n".join(prompt_parts)
         
         # Print the prompt before sending
         print("\n=== Generated Prompt ===")
@@ -230,6 +261,133 @@ Provide ONLY the solution code."""
             print("Errors encountered:")
             print(stderr)
 
+    def print_prompt(self, question_number):
+        """Print the prompt for a given question number without solving it"""
+        print(f"Generating prompt for question {question_number}...")
+        
+        # Get question content from JSON
+        question_data = self.question_loader.get_question(question_number)
+        if not question_data:
+            print(f"Question {question_number} not found in questions.json")
+            return False
+
+        # Build question content
+        question = f"{question_data['question_title']}\n\n{question_data['question_description']}"
+        function_signature = question_data['function_signature']
+
+        # Get pre-classified categories
+        categories = self.classification_loader.get_categories(question_number)
+        if categories:
+            print(f"Using pre-classified categories: {', '.join(categories)}")
+        else:
+            print("No valid categories detected for this question")
+
+        # Get relevant templates
+        template_content = self.template_handler.get_template_content(categories)
+        
+        # Build and print enhanced prompt
+        prompt_parts = [self.main_prompt]
+        
+        # Only add category line if we have valid categories
+        if categories:
+            prompt_parts.append(f"Consider solving the problem using one or both of the following approaches: {', '.join(categories)}")
+        
+        if template_content:
+            prompt_parts.append(template_content)
+            
+        prompt_parts.extend([
+            f"Question:\n{question}",
+            f"Function Signature:\n{function_signature}",
+            self.prompt_ending,
+            "Provide ONLY the solution code."
+        ])
+        
+        prompt = "\n\n".join(prompt_parts)
+        
+        print("\n=== Generated Prompt ===")
+        print(prompt)
+        print("======================\n")
+        
+        return True
+
+    def eval_question(self, question_number: int) -> bool:
+        """Evaluate a single question number.
+        
+        Args:
+            question_number: The question number to evaluate
+            
+        Returns:
+            bool: True if evaluation was successful, False otherwise
+        """
+        print(f"Evaluating question {question_number}...")
+        
+        # Get question content from JSON
+        question_data = self.question_loader.get_question(question_number)
+        if not question_data:
+            print(f"Question {question_number} not found in questions.json")
+            return False
+
+        # Build question content
+        question = f"{question_data['question_title']}\n\n{question_data['question_description']}"
+        function_signature = question_data['function_signature']
+
+        # Get pre-classified categories
+        categories = self.classification_loader.get_categories(question_number)
+        if categories:
+            print(f"Using pre-classified categories: {', '.join(categories)}")
+        else:
+            print("No valid categories detected for this question")
+
+        # Get relevant templates
+        template_content = self.template_handler.get_template_content(categories)
+        
+        # Build enhanced prompt
+        prompt_parts = [self.main_prompt]
+        
+        # Only add category line if we have valid categories
+        if categories:
+            prompt_parts.append(f"Consider solving the problem using one or both of the following approaches: {', '.join(categories)}")
+        
+        if template_content:
+            prompt_parts.append(template_content)
+            
+        prompt_parts.extend([
+            f"Question:\n{question}",
+            f"Function Signature:\n{function_signature}",
+            self.prompt_ending,
+            "Provide ONLY the solution code."
+        ])
+        
+        prompt = "\n\n".join(prompt_parts)
+        
+        # Get solution from GPT
+        print("Getting solution from GPT...")
+        solution = self.gpt_service.get_solution(prompt, function_signature)
+        
+        if not solution:
+            print("Failed to get solution from GPT")
+            return False
+
+        # Save solution
+        FileHandler.save_solution(question_number, solution)
+        
+        # Test solution using leetcode-cli
+        print("Testing solution...")
+        test_output = LeetCodeAPI.test_solution(question_number)
+        test_results = ResultProcessor.process_test_results(test_output['stdout'], test_output['stderr'])
+        
+        # Save results
+        results_file = ResultProcessor.save_test_results(
+            question_number,
+            test_results,
+            "better"
+        )
+        
+        # Display results
+        self._display_results(test_results, test_output['stderr'], results_file)
+        
+        return True
+
 def main():
     # Configure logging
     logging.basicConfig(
@@ -261,3 +419,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # solver = EnhancedLeetCodeSolver()
+    # solver.print_prompt(3196)
+    # solver.eval_question(3196)

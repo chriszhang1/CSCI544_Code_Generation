@@ -19,8 +19,8 @@
   },
   "3104": {
     "categories": [
-      "Math",
-      "Greedy"
+      "Hash Table",
+      "Binary Search"
     ]
   },
   "3105": {
@@ -43,8 +43,8 @@
   },
   "3108": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Bit Manipulation",
+      "Union Find"
     ]
   },
   "3109": {
@@ -127,8 +127,8 @@
   },
   "3123": {
     "categories": [
-      "Graph",
-      "No second match found"
+      "Breadth-first Search",
+      "Depth-first Search"
     ]
   },
   "3125": {
@@ -229,14 +229,14 @@
   },
   "3143": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Hash Table",
+      "Binary Search"
     ]
   },
   "3144": {
     "categories": [
       "Dynamic Programming",
-      "Math"
+      "Hash Table"
     ]
   },
   "3145": {
@@ -266,7 +266,7 @@
   "3149": {
     "categories": [
       "Dynamic Programming",
-      "Math"
+      "Bit Manipulation"
     ]
   },
   "3151": {
@@ -337,7 +337,7 @@
   },
   "3163": {
     "categories": [
-      "Greedy",
+      "No first match found",
       "No second match found"
     ]
   },
@@ -512,7 +512,7 @@
   "3196": {
     "categories": [
       "Dynamic Programming",
-      "Math"
+      "No second match found"
     ]
   },
   "3197": {

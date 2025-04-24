@@ -1,9 +1,9 @@
 {
   "total_questions": 88,
-  "success_count": 28,
-  "failure_count": 60,
-  "success_rate": 31.82,
-  "average_accuracy": 43.79,
-  "average_runtime_ms": 336.82,
-  "average_memory_mb": 25.95
+  "success_count": 34,
+  "failure_count": 54,
+  "success_rate": 38.64,
+  "average_accuracy": 51.3,
+  "average_runtime_ms": 303.76,
+  "average_memory_mb": 26.72
 }
