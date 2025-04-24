@@ -265,3 +265,77 @@
   ]
 }
 ```
+
+### Graph
+```json
+{
+  "category_specific_prompt": [
+    "Determine if the problem requires quick access to the minimum or maximum element, making a heap appropriate.",
+    "Identify whether a min-heap, max-heap, or custom comparator heap is needed based on the problem's goal.",
+    "Use Python’s `heapq` module for a min-heap and simulate a max-heap by pushing negated values if necessary.",
+    "If custom behavior is required, store tuples or objects in the heap and sort based on the desired priority.",
+    "Understand the role of the heap in the problem: is it for top-k elements, dynamic ordering, or merging streams?",
+    "Manage the heap size carefully if the problem involves tracking only the smallest or largest k elements.",
+    "Handle edge cases like empty input, duplicate values, or frequent insertions and removals efficiently.",
+    "Analyze time complexity of heap operations: O(log n) for push/pop, O(n) for heapify, and O(1) for peek.",
+    "Test with both small and large inputs to validate performance and correctness under stress.",
+    "Trace how the heap evolves during execution for one test case to ensure it maintains the correct invariants."
+  ]
+}
+```
+
+### Tree
+```json
+{
+  "category_specific_prompt": [
+    "Classify the tree (binary, n-ary, BST, weighted, rooted, etc.) and clarify the task.",
+    "Decide on traversal style—preorder, inorder, postorder, level-order, DFS/BFS iterative or recursive.",
+    "Define node state (value, depth, parent, subtree info) needed to solve the subproblem.",
+    "Formulate recurrence or aggregation rules for subtree results (e.g., heights, sums, DP on trees).",
+    "Plan edge-case handling: empty tree, single node, skewed chain, duplicate keys, null children.",
+    "Implement clean Python with recursion limits in mind; switch to stack/queue if depth may exceed 1e4.",
+    "Annotate time and space costs—typically O(N) time and O(H) space where H is tree height.",
+    "Craft tests: empty, one node, balanced, highly unbalanced, and value extremes.",
+    "Walk through one non-trivial tree, showing call stack or queue evolution step by step.",
+    "Review invariants (parent links, balance factors, BST order), profile memory, and refine as needed."
+  ]
+}
+```
+
+### Linked List
+```json
+{
+  "category_specific_prompt": [
+    "Identify list type (singly, doubly, circular) and the operation required (reversal, merge, cycle check, k-th node, etc.).",
+    "Map out pointer roles (prev, curr, next) or sentinel nodes to simplify edge handling.",
+    "Draft step-by-step pointer updates and termination conditions—avoid null-pointer errors.",
+    "Plan for corner cases: empty list, single node, head/tail involvement, cycles, duplicate keys.",
+    "Select iterative vs. recursive approach; watch recursion depth for long lists.",
+    "Use auxiliary data only when necessary (extra pointer, hash set, stack) to keep O(1) space if possible.",
+    "Analyze time and space complexity—most tasks should stay O(N) time and O(1)–O(N) space depending on constraints.",
+    "Write clean Python with clear ListNode definitions and inline comments on pointer moves.",
+    "Test on diverse inputs: empty, length-1, even, odd, very long, and pathological (cycle, duplicate, sorted).",
+    "Trace one illustrative example, showing each pointer update until the final structure is achieved."
+  ]
+}
+```
+
+### Sliding Window
+```json
+{
+  "category_specific_prompt": [
+    "Clarify what metric (sum, count, max, distinct, etc.) must be maintained over a contiguous subarray or substring.",
+    "Choose fixed-size or variable-size window and define left/right indices along with any auxiliary counters or deques.",
+    "Outline update rules: how adding nums[right] and removing nums[left] changes the maintained statistic in O(1).",
+    "Specify conditions for shrinking or expanding the window to meet constraints (length limit, k distinct, target sum).",
+    "Handle edge scenarios: empty input, window larger than array, negative numbers, all identical elements, Unicode strings.",
+    "Keep data structures minimal—arrays, hash maps, or monotonic deques—to preserve O(n) time and typically O(1) or O(k) space.",
+    "Convert math inequalities into pointer moves; guard against infinite loops by always advancing at least one boundary.",
+    "Analyze complexity: linear scan O(n) and extra space proportional to the tracking structure, often O(1)–O(k).",
+    "Test with varied cases: zero-length, full-length, tight/loose constraints, duplicates, and alternating high-low values.",
+    "Provide a detailed walkthrough of one example, logging window bounds, state updates, and when answers are recorded."
+  ]
+}
+```
+
+
