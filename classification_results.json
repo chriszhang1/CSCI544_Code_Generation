@@ -2,43 +2,43 @@
   "3100": {
     "categories": [
       "Dynamic Programming",
-      "Greedy"
+      "Math"
     ]
   },
   "3101": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3102": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Math",
+      "Binary Search"
     ]
   },
   "3104": {
     "categories": [
-      "Dynamic Programming",
-      "Hash Table"
+      "Math",
+      "Greedy"
     ]
   },
   "3105": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3106": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3107": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Binary Search",
+      "Sort"
     ]
   },
   "3108": {
@@ -49,13 +49,13 @@
   },
   "3109": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Math",
+      "Greedy"
     ]
   },
   "3110": {
     "categories": [
-      "Two Pointers",
+      "Math",
       "No second match found"
     ]
   },
@@ -73,50 +73,50 @@
   },
   "3113": {
     "categories": [
-      "Dynamic Programming",
+      "Math",
       "Two Pointers"
     ]
   },
   "3114": {
     "categories": [
-      "Dynamic Programming",
-      "No second match found"
+      "Math",
+      "Greedy"
     ]
   },
   "3115": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Math",
+      "Hash Table"
     ]
   },
   "3116": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Binary Search",
+      "Sort"
     ]
   },
   "3117": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Two Pointers"
     ]
   },
   "3119": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3120": {
     "categories": [
-      "Hash Table",
-      "Bit Manipulation"
+      "Math",
+      "Hash Table"
     ]
   },
   "3121": {
     "categories": [
-      "Hash Table",
-      "Two Pointers"
+      "Math",
+      "Hash Table"
     ]
   },
   "3122": {
@@ -127,7 +127,7 @@
   },
   "3123": {
     "categories": [
-      "Dynamic Programming",
+      "Graph",
       "No second match found"
     ]
   },
@@ -140,37 +140,37 @@
   "3127": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3128": {
     "categories": [
-      "Dynamic Programming",
-      "No second match found"
+      "Sort",
+      "Two Pointers"
     ]
   },
   "3129": {
     "categories": [
       "Dynamic Programming",
-      "Math"
+      "No second match found"
     ]
   },
   "3130": {
     "categories": [
       "Dynamic Programming",
-      "Math"
+      "No second match found"
     ]
   },
   "3131": {
     "categories": [
-      "Hash Table",
-      "Two Pointers"
+      "Math",
+      "Hash Table"
     ]
   },
   "3132": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Math",
+      "Hash Table"
     ]
   },
   "3133": {
@@ -181,38 +181,38 @@
   },
   "3134": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Math",
+      "Binary Search"
     ]
   },
   "3135": {
     "categories": [
-      "Dynamic Programming",
-      "No second match found"
+      "Greedy",
+      "Two Pointers"
     ]
   },
   "3136": {
     "categories": [
-      "String.\n\nThe problem difficulty is: Medium.\n\nThe problem tags are: String, Check Conditions, Constraints",
-      "No match found"
+      "Math",
+      "Hash Table"
     ]
   },
   "3137": {
     "categories": [
-      "Dynamic Programming",
-      "Sliding Window"
+      "Math",
+      "Greedy"
     ]
   },
   "3138": {
     "categories": [
       "Hash Table",
-      "Sliding Window"
+      "Two Pointers"
     ]
   },
   "3139": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3141": {
@@ -224,7 +224,7 @@
   "3142": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3143": {
@@ -236,7 +236,7 @@
   "3144": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3145": {
@@ -247,20 +247,20 @@
   },
   "3146": {
     "categories": [
-      "Hash Table",
-      "No second match found"
+      "Math",
+      "Hash Table"
     ]
   },
   "3147": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3148": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3149": {
@@ -272,7 +272,7 @@
   "3151": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3152": {
@@ -284,7 +284,7 @@
   "3153": {
     "categories": [
       "Math",
-      "Hash Table"
+      "Sort"
     ]
   },
   "3154": {
@@ -296,72 +296,72 @@
   "3155": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3157": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Tree",
+      "Depth-first Search"
     ]
   },
   "3158": {
     "categories": [
-      "Hash Table",
-      "Bit Manipulation"
+      "Math",
+      "Hash Table"
     ]
   },
   "3159": {
     "categories": [
       "Hash Table",
-      "No second match found"
+      "Binary Search"
     ]
   },
   "3160": {
     "categories": [
-      "Hash Table",
-      "Bit Manipulation"
+      "Math",
+      "Hash Table"
     ]
   },
   "3161": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Math",
+      "Greedy"
     ]
   },
   "3162": {
     "categories": [
-      "Dynamic Programming",
-      "Hash Table"
+      "Hash Table",
+      "Binary Search"
     ]
   },
   "3163": {
     "categories": [
-      "String.\n\nThe problem difficulty is: Medium.\n\nThe problem tags are: String, Compressed String.",
-      "No match found"
+      "Greedy",
+      "No second match found"
     ]
   },
   "3164": {
     "categories": [
-      "Dynamic Programming",
-      "Hash Table"
+      "Hash Table",
+      "Binary Search"
     ]
   },
   "3165": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3167": {
     "categories": [
-      "Hash Table",
-      "Sort"
+      "Math",
+      "Greedy"
     ]
   },
   "3168": {
     "categories": [
-      "Dynamic Programming",
+      "Two Pointers",
       "No second match found"
     ]
   },
@@ -373,8 +373,8 @@
   },
   "3170": {
     "categories": [
-      "Dynamic Programming",
-      "No second match found"
+      "Greedy",
+      "Two Pointers"
     ]
   },
   "3171": {
@@ -385,56 +385,56 @@
   },
   "3173": {
     "categories": [
-      "Bit Manipulation",
-      "No second match found"
+      "Math",
+      "Bit Manipulation"
     ]
   },
   "3174": {
     "categories": [
       "Two Pointers",
-      "No second match found"
+      "Stack"
     ]
   },
   "3175": {
     "categories": [
       "Dynamic Programming",
-      "Linked List"
+      "Math"
     ]
   },
   "3176": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3177": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3178": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3179": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3180": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3181": {
     "categories": [
-      "Dynamic Programming",
-      "No second match found"
+      "Greedy",
+      "Two Pointers"
     ]
   },
   "3183": {
@@ -445,8 +445,8 @@
   },
   "3184": {
     "categories": [
-      "Dynamic Programming",
-      "Math"
+      "Math",
+      "Hash Table"
     ]
   },
   "3185": {
@@ -458,7 +458,7 @@
   "3186": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3187": {
@@ -470,25 +470,25 @@
   "3189": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3190": {
     "categories": [
-      "Dynamic Programming",
-      "No second match found"
+      "Math",
+      "Two Pointers"
     ]
   },
   "3191": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Greedy"
     ]
   },
   "3192": {
     "categories": [
       "Dynamic Programming",
-      "Bit Manipulation"
+      "Math"
     ]
   },
   "3193": {
@@ -499,7 +499,7 @@
   },
   "3194": {
     "categories": [
-      "Dynamic Programming",
+      "Math",
       "No second match found"
     ]
   },
@@ -512,7 +512,7 @@
   "3196": {
     "categories": [
       "Dynamic Programming",
-      "No second match found"
+      "Math"
     ]
   },
   "3197": {
@@ -523,8 +523,8 @@
   },
   "3199": {
     "categories": [
-      "Bit Manipulation",
-      "No second match found"
+      "Math",
+      "Hash Table"
     ]
   }
 }
