@@ -35,3 +35,5 @@ test/
 topic_classifier_model/
 leetcode_results.json
 leetcode_results.json
+
+.DS_Store
