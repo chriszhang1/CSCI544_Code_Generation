@@ -4,7 +4,7 @@ import json
 import argparse
 import logging
 from dotenv import load_dotenv
-from run_command import GPTService, ResultProcessor, FileHandler
+from run_command import GPTService, ResultProcessor, FileHandler, LeetCodeAPI
 
 # Load environment variables from .env file
 load_dotenv()
@@ -131,11 +131,13 @@ class TemplateHandler:
         return "\n\n".join(template_content)
 
 class EnhancedLeetCodeSolver:
-    def __init__(self):
+    def __init__(self, prompt_type="raw"):
+        self.gpt_service = GPTService(os.getenv('OPENAI_API_KEY'))
+        self.prompt_type = prompt_type
+        self.result_processor = ResultProcessor()
         self.template_handler = TemplateHandler()
         self.question_loader = QuestionLoader()
         self.classification_loader = ClassificationLoader()
-        self.gpt_service = GPTService(os.getenv('OPENAI_API_KEY'))
 
     def solve_question(self, question_number):
         """Solve a single LeetCode question with enhanced template-based prompting"""
@@ -190,17 +192,16 @@ Provide ONLY the solution code."""
         # Save solution
         FileHandler.save_solution(question_number, solution)
         
-        # Test solution
+        # Test solution using leetcode-cli
         print("Testing solution...")
-        test_output = self.leetcode_api.test_solution(question_number)
+        test_output = LeetCodeAPI.test_solution(question_number)
         test_results = ResultProcessor.process_test_results(test_output['stdout'], test_output['stderr'])
         
         # Save results
         results_file = ResultProcessor.save_test_results(
             question_number,
             test_results,
-            categories,
-            prompt_type="better"
+            "better"
         )
         
         # Display results

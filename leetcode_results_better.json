@@ -1,341 +1,102 @@
 {
-  "3400": {
-    "question_number": 3400,
-    "question_name": "maximum-number-of-matching-indices-after-right-shifts",
-    "timestamp": "2025-04-16T14:42:17.929721",
+  "3100": {
+    "question_number": 3100,
+    "question_name": "water-bottles-ii",
+    "timestamp": "2025-04-16T23:19:33.532279",
     "status": "Failed",
-    "accuracy": 68.15,
+    "accuracy": 1.57,
     "runtime": null,
     "memory": null,
-    "cases_passed": 430,
-    "total_cases": 631
+    "cases_passed": 15,
+    "total_cases": 958
   },
-  "3402": {
-    "question_number": 3402,
-    "question_name": "minimum-operations-to-make-columns-strictly-increasing",
-    "timestamp": "2025-04-16T14:42:23.065113",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 10,
-      "percentile": 48
-    },
-    "memory": {
-      "usage_mb": 17.8,
-      "percentile": 52
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3403": {
-    "question_number": 3403,
-    "question_name": "find-the-lexicographically-largest-string-from-the-box-i",
-    "timestamp": "2025-04-16T14:42:25.834666",
+  "3101": {
+    "question_number": 3101,
+    "question_name": "count-alternating-subarrays",
+    "timestamp": "2025-04-16T23:19:38.188722",
     "status": "Failed",
-    "accuracy": 22.17,
+    "accuracy": 12.8,
     "runtime": null,
     "memory": null,
-    "cases_passed": 174,
-    "total_cases": 785
+    "cases_passed": 101,
+    "total_cases": 789
   },
-  "3404": {
-    "question_number": 3404,
-    "question_name": "count-special-subsequences",
-    "timestamp": "2025-04-16T14:42:39.866948",
+  "3102": {
+    "question_number": 3102,
+    "question_name": "minimize-manhattan-distances",
+    "timestamp": "2025-04-16T23:19:43.862024",
     "status": "Failed",
-    "accuracy": 0,
+    "accuracy": 8.94,
     "runtime": null,
     "memory": null,
-    "cases_passed": null,
-    "total_cases": null
+    "cases_passed": 48,
+    "total_cases": 537
   },
-  "3405": {
-    "question_number": 3405,
-    "question_name": "count-the-number-of-arrays-with-k-matching-adjacent-elements",
-    "timestamp": "2025-04-16T14:42:51.548927",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 7696,
-      "percentile": 6
-    },
-    "memory": {
-      "usage_mb": 17.5,
-      "percentile": 95
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3406": {
-    "question_number": 3406,
-    "question_name": "find-the-lexicographically-largest-string-from-the-box-ii",
-    "timestamp": "2025-04-16T14:42:54.835111",
+  "3104": {
+    "question_number": 3104,
+    "question_name": "find-longest-self-contained-substring",
+    "timestamp": "2025-04-16T23:19:48.366912",
     "status": "Failed",
-    "accuracy": 0.99,
+    "accuracy": 16.38,
     "runtime": null,
     "memory": null,
-    "cases_passed": 8,
-    "total_cases": 810
+    "cases_passed": 231,
+    "total_cases": 1410
   },
-  "3407": {
-    "question_number": 3407,
-    "question_name": "substring-matching-pattern",
-    "timestamp": "2025-04-16T14:42:57.906605",
-    "status": "Failed",
-    "accuracy": 95.87,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 929,
-    "total_cases": 969
-  },
-  "3408": {
-    "question_number": 3408,
-    "question_name": "design-task-manager",
-    "timestamp": "2025-04-16T14:43:04.990745",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 613,
-      "percentile": 48
-    },
-    "memory": {
-      "usage_mb": 102.3,
-      "percentile": 74
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3409": {
-    "question_number": 3409,
-    "question_name": "longest-subsequence-with-decreasing-adjacent-difference",
-    "timestamp": "2025-04-16T14:43:29.448234",
-    "status": "Failed",
-    "accuracy": 24.57,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 144,
-    "total_cases": 586
-  },
-  "3410": {
-    "question_number": 3410,
-    "question_name": "maximize-subarray-sum-after-removing-all-occurrences-of-one-element",
-    "timestamp": "2025-04-16T14:43:51.029400",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3411": {
-    "question_number": 3411,
-    "question_name": "maximum-subarray-with-equal-products",
-    "timestamp": "2025-04-16T14:43:56.312894",
-    "status": "Failed",
-    "accuracy": 24.62,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 213,
-    "total_cases": 865
-  },
-  "3412": {
-    "question_number": 3412,
-    "question_name": "find-mirror-score-of-a-string",
-    "timestamp": "2025-04-16T14:44:13.028555",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3413": {
-    "question_number": 3413,
-    "question_name": "maximum-coins-from-k-consecutive-bags",
-    "timestamp": "2025-04-16T14:44:19.929965",
-    "status": "Failed",
-    "accuracy": 0.33,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 2,
-    "total_cases": 605
-  },
-  "3414": {
-    "question_number": 3414,
-    "question_name": "maximum-score-of-non-overlapping-intervals",
-    "timestamp": "2025-04-16T14:44:36.647406",
-    "status": "Failed",
-    "accuracy": 72.98,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 424,
-    "total_cases": 581
-  },
-  "3416": {
-    "question_number": 3416,
-    "question_name": "subsequences-with-a-unique-middle-mode-ii",
-    "timestamp": "2025-04-16T14:44:41.700787",
-    "status": "Failed",
-    "accuracy": 17.79,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 150,
-    "total_cases": 843
-  },
-  "3417": {
-    "question_number": 3417,
-    "question_name": "zigzag-grid-traversal-with-skip",
-    "timestamp": "2025-04-16T14:44:45.966832",
-    "status": "Failed",
-    "accuracy": 40.71,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 342,
-    "total_cases": 840
-  },
-  "3418": {
-    "question_number": 3418,
-    "question_name": "maximum-amount-of-money-robot-can-earn",
-    "timestamp": "2025-04-16T14:44:56.142136",
-    "status": "Failed",
-    "accuracy": 8.12,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 47,
-    "total_cases": 579
-  },
-  "3419": {
-    "question_number": 3419,
-    "question_name": "minimize-the-maximum-edge-weight-of-graph",
-    "timestamp": "2025-04-16T14:45:04.477115",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 2863,
-      "percentile": 19
-    },
-    "memory": {
-      "usage_mb": 63.3,
-      "percentile": 99
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3420": {
-    "question_number": 3420,
-    "question_name": "count-non-decreasing-subarrays-after-k-operations",
-    "timestamp": "2025-04-16T14:45:08.483176",
-    "status": "Failed",
-    "accuracy": 0.96,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 7,
-    "total_cases": 731
-  },
-  "3422": {
-    "question_number": 3422,
-    "question_name": "minimum-operations-to-make-subarray-elements-equal",
-    "timestamp": "2025-04-16T14:45:23.274036",
-    "status": "Failed",
-    "accuracy": 4.66,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 36,
-    "total_cases": 773
-  },
-  "3423": {
-    "question_number": 3423,
-    "question_name": "maximum-difference-between-adjacent-elements-in-a-circular-array",
-    "timestamp": "2025-04-16T14:45:27.223693",
+  "3105": {
+    "question_number": 3105,
+    "question_name": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+    "timestamp": "2025-04-16T23:19:55.252101",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
       "time_ms": 3,
-      "percentile": 64
+      "percentile": 61
     },
     "memory": {
-      "usage_mb": 17.8,
-      "percentile": 5
+      "usage_mb": 17.4,
+      "percentile": 85
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "3424": {
-    "question_number": 3424,
-    "question_name": "minimum-cost-to-make-arrays-identical",
-    "timestamp": "2025-04-16T14:45:30.790657",
+  "3106": {
+    "question_number": 3106,
+    "question_name": "lexicographically-smallest-string-after-operations-with-constraint",
+    "timestamp": "2025-04-16T23:19:59.956292",
     "status": "Failed",
-    "accuracy": 62.62,
+    "accuracy": 14.5,
     "runtime": null,
     "memory": null,
-    "cases_passed": 598,
-    "total_cases": 955
+    "cases_passed": 87,
+    "total_cases": 600
   },
-  "3425": {
-    "question_number": 3425,
-    "question_name": "longest-special-path",
-    "timestamp": "2025-04-16T14:45:36.542710",
+  "3107": {
+    "question_number": 3107,
+    "question_name": "minimum-operations-to-make-median-of-array-equal-to-k",
+    "timestamp": "2025-04-16T23:20:05.190914",
     "status": "Failed",
-    "accuracy": 51.7,
+    "accuracy": 54.08,
     "runtime": null,
     "memory": null,
-    "cases_passed": 349,
-    "total_cases": 675
+    "cases_passed": 391,
+    "total_cases": 723
   },
-  "3426": {
-    "question_number": 3426,
-    "question_name": "manhattan-distances-of-all-arrangements-of-pieces",
-    "timestamp": "2025-04-16T14:45:42.794738",
+  "3108": {
+    "question_number": 3108,
+    "question_name": "minimum-cost-walk-in-weighted-graph",
+    "timestamp": "2025-04-16T23:20:24.197587",
     "status": "Failed",
-    "accuracy": 0.0,
+    "accuracy": 15.85,
     "runtime": null,
     "memory": null,
-    "cases_passed": 0,
-    "total_cases": 919
+    "cases_passed": 87,
+    "total_cases": 549
   },
-  "3427": {
-    "question_number": 3427,
-    "question_name": "sum-of-variable-length-subarrays",
-    "timestamp": "2025-04-16T14:45:45.594713",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 13,
-      "percentile": 15
-    },
-    "memory": {
-      "usage_mb": 17.7,
-      "percentile": 24
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3428": {
-    "question_number": 3428,
-    "question_name": "maximum-and-minimum-sums-of-at-most-size-k-subsequences",
-    "timestamp": "2025-04-16T14:45:49.812473",
-    "status": "Failed",
-    "accuracy": 8.0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 65,
-    "total_cases": 812
-  },
-  "3429": {
-    "question_number": 3429,
-    "question_name": "paint-house-iv",
-    "timestamp": "2025-04-16T14:45:55.190006",
-    "status": "Failed",
-    "accuracy": 30.75,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 294,
-    "total_cases": 956
-  },
-  "3430": {
-    "question_number": 3430,
-    "question_name": "maximum-and-minimum-sums-of-at-most-size-k-subarrays",
-    "timestamp": "2025-04-16T14:46:09.903159",
+  "3109": {
+    "question_number": 3109,
+    "question_name": "find-the-index-of-permutation",
+    "timestamp": "2025-04-16T23:20:40.203707",
     "status": "Failed",
     "accuracy": 0,
     "runtime": null,
@@ -343,38 +104,343 @@
     "cases_passed": null,
     "total_cases": null
   },
-  "3431": {
-    "question_number": 3431,
-    "question_name": "minimum-unlocked-indices-to-sort-nums",
-    "timestamp": "2025-04-16T14:46:15.741289",
+  "3110": {
+    "question_number": 3110,
+    "question_name": "score-of-a-string",
+    "timestamp": "2025-04-16T23:20:43.467341",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 0,
+      "percentile": 100
+    },
+    "memory": {
+      "usage_mb": 17.5,
+      "percentile": 41
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3111": {
+    "question_number": 3111,
+    "question_name": "minimum-rectangles-to-cover-points",
+    "timestamp": "2025-04-16T23:20:47.240600",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 62,
+      "percentile": 7
+    },
+    "memory": {
+      "usage_mb": 54.5,
+      "percentile": 18
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3112": {
+    "question_number": 3112,
+    "question_name": "minimum-time-to-visit-disappearing-nodes",
+    "timestamp": "2025-04-16T23:20:54.113385",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 380,
+      "percentile": 88
+    },
+    "memory": {
+      "usage_mb": 66.8,
+      "percentile": 91
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3113": {
+    "question_number": 3113,
+    "question_name": "find-the-number-of-subarrays-where-boundary-elements-are-maximum",
+    "timestamp": "2025-04-16T23:21:12.046234",
     "status": "Failed",
-    "accuracy": 33.99,
+    "accuracy": 0,
     "runtime": null,
     "memory": null,
-    "cases_passed": 309,
-    "total_cases": 909
+    "cases_passed": null,
+    "total_cases": null
   },
-  "3432": {
-    "question_number": 3432,
-    "question_name": "count-partitions-with-even-sum-difference",
-    "timestamp": "2025-04-16T14:46:18.860438",
+  "3114": {
+    "question_number": 3114,
+    "question_name": "latest-time-you-can-obtain-after-replacing-characters",
+    "timestamp": "2025-04-16T23:21:17.166800",
+    "status": "Failed",
+    "accuracy": 22.91,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 208,
+    "total_cases": 908
+  },
+  "3115": {
+    "question_number": 3115,
+    "question_name": "maximum-prime-difference",
+    "timestamp": "2025-04-16T23:21:21.729833",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 124,
+      "percentile": 22
+    },
+    "memory": {
+      "usage_mb": 30.1,
+      "percentile": 8
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3116": {
+    "question_number": 3116,
+    "question_name": "kth-smallest-amount-with-single-denomination-combination",
+    "timestamp": "2025-04-16T23:21:37.253134",
+    "status": "Failed",
+    "accuracy": 67.02,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 376,
+    "total_cases": 561
+  },
+  "3117": {
+    "question_number": 3117,
+    "question_name": "minimum-sum-of-values-by-dividing-array",
+    "timestamp": "2025-04-16T23:22:00.022370",
+    "status": "Failed",
+    "accuracy": 21.88,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 112,
+    "total_cases": 512
+  },
+  "3119": {
+    "question_number": 3119,
+    "question_name": "maximum-number-of-potholes-that-can-be-fixed",
+    "timestamp": "2025-04-16T23:22:04.280915",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3120": {
+    "question_number": 3120,
+    "question_name": "count-the-number-of-special-characters-i",
+    "timestamp": "2025-04-16T23:22:07.491611",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 0,
+      "percentile": 100
+    },
+    "memory": {
+      "usage_mb": 17.6,
+      "percentile": 35
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3121": {
+    "question_number": 3121,
+    "question_name": "count-the-number-of-special-characters-ii",
+    "timestamp": "2025-04-16T23:22:11.450930",
+    "status": "Failed",
+    "accuracy": 48.33,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 433,
+    "total_cases": 896
+  },
+  "3122": {
+    "question_number": 3122,
+    "question_name": "minimum-number-of-operations-to-satisfy-conditions",
+    "timestamp": "2025-04-16T23:22:18.974418",
+    "status": "Failed",
+    "accuracy": 4.26,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 28,
+    "total_cases": 658
+  },
+  "3123": {
+    "question_number": 3123,
+    "question_name": "find-edges-in-shortest-paths",
+    "timestamp": "2025-04-16T23:22:31.352558",
+    "status": "Failed",
+    "accuracy": 94.59,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 507,
+    "total_cases": 536
+  },
+  "3125": {
+    "question_number": 3125,
+    "question_name": "maximum-number-that-makes-result-of-bitwise-and-zero",
+    "timestamp": "2025-04-16T23:22:34.387509",
+    "status": "Failed",
+    "accuracy": 0.01,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 1,
+    "total_cases": 8500
+  },
+  "3127": {
+    "question_number": 3127,
+    "question_name": "make-a-square-with-the-same-color",
+    "timestamp": "2025-04-16T23:22:38.943563",
+    "status": "Failed",
+    "accuracy": 97.09,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 500,
+    "total_cases": 515
+  },
+  "3128": {
+    "question_number": 3128,
+    "question_name": "right-triangles",
+    "timestamp": "2025-04-16T23:22:56.716924",
+    "status": "Failed",
+    "accuracy": 17.9,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 114,
+    "total_cases": 637
+  },
+  "3129": {
+    "question_number": 3129,
+    "question_name": "find-all-possible-stable-binary-arrays-i",
+    "timestamp": "2025-04-16T23:23:05.330692",
+    "status": "Failed",
+    "accuracy": 3.73,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 25,
+    "total_cases": 670
+  },
+  "3130": {
+    "question_number": 3130,
+    "question_name": "find-all-possible-stable-binary-arrays-ii",
+    "timestamp": "2025-04-16T23:23:28.894499",
+    "status": "Failed",
+    "accuracy": 10.14,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 59,
+    "total_cases": 582
+  },
+  "3131": {
+    "question_number": 3131,
+    "question_name": "find-the-integer-added-to-array-i",
+    "timestamp": "2025-04-16T23:23:32.452242",
+    "status": "Failed",
+    "accuracy": 26.12,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 158,
+    "total_cases": 605
+  },
+  "3132": {
+    "question_number": 3132,
+    "question_name": "find-the-integer-added-to-array-ii",
+    "timestamp": "2025-04-16T23:23:36.917460",
+    "status": "Failed",
+    "accuracy": 7.5,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 42,
+    "total_cases": 560
+  },
+  "3133": {
+    "question_number": 3133,
+    "question_name": "minimum-array-end",
+    "timestamp": "2025-04-16T23:23:39.494245",
+    "status": "Failed",
+    "accuracy": 6.41,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 49,
+    "total_cases": 765
+  },
+  "3134": {
+    "question_number": 3134,
+    "question_name": "find-the-median-of-the-uniqueness-array",
+    "timestamp": "2025-04-16T23:23:52.737439",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3135": {
+    "question_number": 3135,
+    "question_name": "equalize-strings-by-adding-or-removing-characters-at-ends",
+    "timestamp": "2025-04-16T23:23:56.225962",
+    "status": "Failed",
+    "accuracy": 9.53,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 81,
+    "total_cases": 850
+  },
+  "3136": {
+    "question_number": 3136,
+    "question_name": "valid-word",
+    "timestamp": "2025-04-16T23:24:00.166670",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
       "time_ms": 2,
-      "percentile": 29
+      "percentile": 28
     },
     "memory": {
-      "usage_mb": 17.8,
-      "percentile": 13
+      "usage_mb": 17.5,
+      "percentile": 58
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "3433": {
-    "question_number": 3433,
-    "question_name": "count-mentions-per-user",
-    "timestamp": "2025-04-16T14:46:24.549652",
+  "3137": {
+    "question_number": 3137,
+    "question_name": "minimum-number-of-operations-to-make-word-k-periodic",
+    "timestamp": "2025-04-16T23:24:04.938959",
+    "status": "Failed",
+    "accuracy": 58.78,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 482,
+    "total_cases": 820
+  },
+  "3138": {
+    "question_number": 3138,
+    "question_name": "minimum-length-of-anagram-concatenation",
+    "timestamp": "2025-04-16T23:24:08.409394",
+    "status": "Failed",
+    "accuracy": 26.96,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 151,
+    "total_cases": 560
+  },
+  "3139": {
+    "question_number": 3139,
+    "question_name": "minimum-cost-to-equalize-array",
+    "timestamp": "2025-04-16T23:24:16.105454",
+    "status": "Failed",
+    "accuracy": 10.38,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 66,
+    "total_cases": 636
+  },
+  "3141": {
+    "question_number": 3141,
+    "question_name": "maximum-hamming-distances",
+    "timestamp": "2025-04-16T23:24:31.393018",
     "status": "Failed",
     "accuracy": 0,
     "runtime": null,
@@ -382,99 +448,60 @@
     "cases_passed": null,
     "total_cases": null
   },
-  "3434": {
-    "question_number": 3434,
-    "question_name": "maximum-frequency-after-subarray-operation",
-    "timestamp": "2025-04-16T14:46:28.435415",
-    "status": "Failed",
-    "accuracy": 8.41,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 63,
-    "total_cases": 749
-  },
-  "3435": {
-    "question_number": 3435,
-    "question_name": "frequencies-of-shortest-supersequences",
-    "timestamp": "2025-04-16T14:46:33.052677",
-    "status": "Failed",
-    "accuracy": 49.88,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 403,
-    "total_cases": 808
-  },
-  "3437": {
-    "question_number": 3437,
-    "question_name": "permutations-iii",
-    "timestamp": "2025-04-16T14:46:38.355080",
+  "3142": {
+    "question_number": 3142,
+    "question_name": "check-if-grid-satisfies-conditions",
+    "timestamp": "2025-04-16T23:24:35.436882",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
-      "time_ms": 999,
-      "percentile": 9
+      "time_ms": 0,
+      "percentile": 100
     },
     "memory": {
-      "usage_mb": 23.7,
-      "percentile": 59
+      "usage_mb": 17.7,
+      "percentile": 11
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "3438": {
-    "question_number": 3438,
-    "question_name": "find-valid-pair-of-adjacent-digits-in-string",
-    "timestamp": "2025-04-16T14:46:42.394641",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 3,
-      "percentile": 87
-    },
-    "memory": {
-      "usage_mb": 17.8,
-      "percentile": 9
-    },
+  "3143": {
+    "question_number": 3143,
+    "question_name": "maximum-points-inside-the-square",
+    "timestamp": "2025-04-16T23:24:40.068604",
+    "status": "Failed",
+    "accuracy": 28.99,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 167,
+    "total_cases": 576
+  },
+  "3144": {
+    "question_number": 3144,
+    "question_name": "minimum-substring-partition-of-equal-character-frequency",
+    "timestamp": "2025-04-16T23:24:44.847405",
+    "status": "Failed",
+    "accuracy": 20.75,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 144,
+    "total_cases": 694
+  },
+  "3145": {
+    "question_number": 3145,
+    "question_name": "find-products-of-elements-of-big-array",
+    "timestamp": "2025-04-16T23:25:03.104517",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
     "cases_passed": null,
     "total_cases": null
   },
-  "3439": {
-    "question_number": 3439,
-    "question_name": "reschedule-meetings-for-maximum-free-time-i",
-    "timestamp": "2025-04-16T14:47:00.495265",
-    "status": "Failed",
-    "accuracy": 36.72,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 253,
-    "total_cases": 689
-  },
-  "3440": {
-    "question_number": 3440,
-    "question_name": "reschedule-meetings-for-maximum-free-time-ii",
-    "timestamp": "2025-04-16T14:47:09.095177",
-    "status": "Failed",
-    "accuracy": 46.76,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 325,
-    "total_cases": 695
-  },
-  "3441": {
-    "question_number": 3441,
-    "question_name": "minimum-cost-good-caption",
-    "timestamp": "2025-04-16T14:47:13.751256",
-    "status": "Failed",
-    "accuracy": 0.14,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 1,
-    "total_cases": 714
-  },
-  "3442": {
-    "question_number": 3442,
-    "question_name": "maximum-difference-between-even-and-odd-frequency-i",
-    "timestamp": "2025-04-16T14:47:18.221962",
+  "3146": {
+    "question_number": 3146,
+    "question_name": "permutation-difference-between-two-strings",
+    "timestamp": "2025-04-16T23:25:08.923502",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
@@ -488,54 +515,21 @@
     "cases_passed": null,
     "total_cases": null
   },
-  "3443": {
-    "question_number": 3443,
-    "question_name": "maximum-manhattan-distance-after-k-changes",
-    "timestamp": "2025-04-16T14:47:22.982926",
+  "3147": {
+    "question_number": 3147,
+    "question_name": "taking-maximum-energy-from-the-mystic-dungeon",
+    "timestamp": "2025-04-16T23:25:15.042461",
     "status": "Failed",
-    "accuracy": 17.15,
+    "accuracy": 63.6,
     "runtime": null,
     "memory": null,
-    "cases_passed": 142,
-    "total_cases": 828
+    "cases_passed": 339,
+    "total_cases": 533
   },
-  "3444": {
-    "question_number": 3444,
-    "question_name": "minimum-increments-for-target-multiples-in-an-array",
-    "timestamp": "2025-04-16T14:47:26.402023",
-    "status": "Failed",
-    "accuracy": 31.19,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 184,
-    "total_cases": 590
-  },
-  "3445": {
-    "question_number": 3445,
-    "question_name": "maximum-difference-between-even-and-odd-frequency-ii",
-    "timestamp": "2025-04-16T14:47:47.775258",
-    "status": "Failed",
-    "accuracy": 41.16,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 284,
-    "total_cases": 690
-  },
-  "3446": {
-    "question_number": 3446,
-    "question_name": "sort-matrix-by-diagonals",
-    "timestamp": "2025-04-16T14:47:52.207570",
-    "status": "Failed",
-    "accuracy": 14.85,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 194,
-    "total_cases": 1306
-  },
-  "3447": {
-    "question_number": 3447,
-    "question_name": "assign-elements-to-groups-with-constraints",
-    "timestamp": "2025-04-16T14:48:10.573063",
+  "3148": {
+    "question_number": 3148,
+    "question_name": "maximum-difference-score-in-a-grid",
+    "timestamp": "2025-04-16T23:25:29.800328",
     "status": "Failed",
     "accuracy": 0,
     "runtime": null,
@@ -543,438 +537,38 @@
     "cases_passed": null,
     "total_cases": null
   },
-  "3448": {
-    "question_number": 3448,
-    "question_name": "count-substrings-divisible-by-last-digit",
-    "timestamp": "2025-04-16T14:48:14.835940",
+  "3149": {
+    "question_number": 3149,
+    "question_name": "find-the-minimum-cost-array-permutation",
+    "timestamp": "2025-04-16T23:25:32.972335",
     "status": "Failed",
-    "accuracy": 0,
+    "accuracy": 6.82,
     "runtime": null,
     "memory": null,
-    "cases_passed": null,
-    "total_cases": null
+    "cases_passed": 64,
+    "total_cases": 939
   },
-  "3449": {
-    "question_number": 3449,
-    "question_name": "maximize-the-minimum-game-score",
-    "timestamp": "2025-04-16T14:48:19.406188",
-    "status": "Failed",
-    "accuracy": 2.17,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 15,
-    "total_cases": 692
-  },
-  "3450": {
-    "question_number": 3450,
-    "question_name": "maximum-students-on-a-single-bench",
-    "timestamp": "2025-04-16T14:48:22.997100",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 8,
-      "percentile": 31
-    },
-    "memory": {
-      "usage_mb": 17.5,
-      "percentile": 82
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3452": {
-    "question_number": 3452,
-    "question_name": "sum-of-good-numbers",
-    "timestamp": "2025-04-16T14:48:26.458885",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 4,
-      "percentile": 21
-    },
-    "memory": {
-      "usage_mb": 17.5,
-      "percentile": 77
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3453": {
-    "question_number": 3453,
-    "question_name": "separate-squares-i",
-    "timestamp": "2025-04-16T14:48:31.862315",
-    "status": "Failed",
-    "accuracy": 0.0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 0,
-    "total_cases": 915
-  },
-  "3454": {
-    "question_number": 3454,
-    "question_name": "separate-squares-ii",
-    "timestamp": "2025-04-16T14:49:05.510438",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3455": {
-    "question_number": 3455,
-    "question_name": "shortest-matching-substring",
-    "timestamp": "2025-04-16T14:49:10.381829",
-    "status": "Failed",
-    "accuracy": 29.31,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 233,
-    "total_cases": 795
-  },
-  "3456": {
-    "question_number": 3456,
-    "question_name": "find-special-substring-of-length-k",
-    "timestamp": "2025-04-16T14:49:13.477998",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 3,
-      "percentile": 54
-    },
-    "memory": {
-      "usage_mb": 17.5,
-      "percentile": 62
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3457": {
-    "question_number": 3457,
-    "question_name": "eat-pizzas",
-    "timestamp": "2025-04-16T14:49:17.732462",
-    "status": "Failed",
-    "accuracy": 13.43,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 135,
-    "total_cases": 1005
-  },
-  "3458": {
-    "question_number": 3458,
-    "question_name": "select-k-disjoint-special-substrings",
-    "timestamp": "2025-04-16T14:49:22.719406",
-    "status": "Failed",
-    "accuracy": 85.14,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 842,
-    "total_cases": 989
-  },
-  "3459": {
-    "question_number": 3459,
-    "question_name": "length-of-longest-v-shaped-diagonal-segment",
-    "timestamp": "2025-04-16T14:49:30.198744",
-    "status": "Failed",
-    "accuracy": 16.4,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 92,
-    "total_cases": 561
-  },
-  "3460": {
-    "question_number": 3460,
-    "question_name": "longest-common-prefix-after-at-most-one-removal",
-    "timestamp": "2025-04-16T14:49:46.197421",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3461": {
-    "question_number": 3461,
-    "question_name": "check-if-digits-are-equal-in-string-after-operations-i",
-    "timestamp": "2025-04-16T14:49:49.923823",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 104,
-      "percentile": 13
-    },
-    "memory": {
-      "usage_mb": 17.4,
-      "percentile": 97
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3462": {
-    "question_number": 3462,
-    "question_name": "maximum-sum-with-at-most-k-elements",
-    "timestamp": "2025-04-16T14:49:54.495457",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 475,
-      "percentile": 33
-    },
-    "memory": {
-      "usage_mb": 49.9,
-      "percentile": 24
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3463": {
-    "question_number": 3463,
-    "question_name": "check-if-digits-are-equal-in-string-after-operations-ii",
-    "timestamp": "2025-04-16T14:50:15.179513",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3464": {
-    "question_number": 3464,
-    "question_name": "maximize-the-distance-between-points-on-a-square",
-    "timestamp": "2025-04-16T14:50:20.490997",
-    "status": "Failed",
-    "accuracy": 51.86,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 321,
-    "total_cases": 619
-  },
-  "3466": {
-    "question_number": 3466,
-    "question_name": "maximum-coin-collection",
-    "timestamp": "2025-04-16T14:50:38.218138",
-    "status": "Failed",
-    "accuracy": 48.02,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 412,
-    "total_cases": 858
-  },
-  "3467": {
-    "question_number": 3467,
-    "question_name": "transform-array-by-parity",
-    "timestamp": "2025-04-16T14:50:41.409533",
+  "3151": {
+    "question_number": 3151,
+    "question_name": "special-array-i",
+    "timestamp": "2025-04-16T23:25:36.418689",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
       "time_ms": 0,
       "percentile": 100
-    },
-    "memory": {
-      "usage_mb": 17.8,
-      "percentile": 17
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3468": {
-    "question_number": 3468,
-    "question_name": "find-the-number-of-copy-arrays",
-    "timestamp": "2025-04-16T14:51:14.621810",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3469": {
-    "question_number": 3469,
-    "question_name": "find-minimum-cost-to-remove-array-elements",
-    "timestamp": "2025-04-16T14:51:17.961229",
-    "status": "Failed",
-    "accuracy": 24.16,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 195,
-    "total_cases": 807
-  },
-  "3470": {
-    "question_number": 3470,
-    "question_name": "permutations-iv",
-    "timestamp": "2025-04-16T14:51:33.720700",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3471": {
-    "question_number": 3471,
-    "question_name": "find-the-largest-almost-missing-integer",
-    "timestamp": "2025-04-16T14:51:37.500697",
-    "status": "Failed",
-    "accuracy": 96.89,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 872,
-    "total_cases": 900
-  },
-  "3472": {
-    "question_number": 3472,
-    "question_name": "longest-palindromic-subsequence-after-at-most-k-operations",
-    "timestamp": "2025-04-16T14:51:42.847809",
-    "status": "Failed",
-    "accuracy": 7.45,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 41,
-    "total_cases": 550
-  },
-  "3473": {
-    "question_number": 3473,
-    "question_name": "sum-of-k-subarrays-with-length-at-least-m",
-    "timestamp": "2025-04-16T14:52:14.133598",
-    "status": "Failed",
-    "accuracy": 45.35,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 283,
-    "total_cases": 624
-  },
-  "3474": {
-    "question_number": 3474,
-    "question_name": "lexicographically-smallest-generated-string",
-    "timestamp": "2025-04-16T14:52:19.534689",
-    "status": "Failed",
-    "accuracy": 95.53,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 706,
-    "total_cases": 739
-  },
-  "3476": {
-    "question_number": 3476,
-    "question_name": "maximize-profit-from-task-assignment",
-    "timestamp": "2025-04-16T14:52:24.587446",
-    "status": "Failed",
-    "accuracy": 1.18,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 9,
-    "total_cases": 760
-  },
-  "3477": {
-    "question_number": 3477,
-    "question_name": "fruits-into-baskets-ii",
-    "timestamp": "2025-04-16T14:52:27.905021",
-    "status": "Failed",
-    "accuracy": 52.1,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 471,
-    "total_cases": 904
-  },
-  "3478": {
-    "question_number": 3478,
-    "question_name": "choose-k-elements-with-maximum-sum",
-    "timestamp": "2025-04-16T14:52:43.172951",
-    "status": "Failed",
-    "accuracy": 7.72,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 49,
-    "total_cases": 635
-  },
-  "3479": {
-    "question_number": 3479,
-    "question_name": "fruits-into-baskets-iii",
-    "timestamp": "2025-04-16T14:53:11.404231",
-    "status": "Failed",
-    "accuracy": 52.03,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 385,
-    "total_cases": 740
-  },
-  "3480": {
-    "question_number": 3480,
-    "question_name": "maximize-subarrays-after-removing-one-conflicting-pair",
-    "timestamp": "2025-04-16T14:53:15.452030",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3481": {
-    "question_number": 3481,
-    "question_name": "apply-substitutions",
-    "timestamp": "2025-04-16T14:53:18.624696",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 4,
-      "percentile": 90
-    },
-    "memory": {
-      "usage_mb": 17.8,
-      "percentile": 59
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3483": {
-    "question_number": 3483,
-    "question_name": "unique-3-digit-even-numbers",
-    "timestamp": "2025-04-16T14:53:22.326223",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 35,
-      "percentile": 20
     },
     "memory": {
       "usage_mb": 17.7,
-      "percentile": 40
+      "percentile": 39
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "3484": {
-    "question_number": 3484,
-    "question_name": "design-spreadsheet",
-    "timestamp": "2025-04-16T14:53:26.932720",
-    "status": "Success",
-    "accuracy": 100,
-    "runtime": {
-      "time_ms": 79,
-      "percentile": 90
-    },
-    "memory": {
-      "usage_mb": 23.2,
-      "percentile": 61
-    },
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3485": {
-    "question_number": 3485,
-    "question_name": "longest-common-prefix-of-k-strings-after-removal",
-    "timestamp": "2025-04-16T14:53:43.822759",
-    "status": "Failed",
-    "accuracy": 73.91,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 493,
-    "total_cases": 667
-  },
-  "3486": {
-    "question_number": 3486,
-    "question_name": "longest-special-path-ii",
-    "timestamp": "2025-04-16T14:53:51.893673",
+  "3152": {
+    "question_number": 3152,
+    "question_name": "special-array-ii",
+    "timestamp": "2025-04-16T23:25:55.204045",
     "status": "Failed",
     "accuracy": 0,
     "runtime": null,
@@ -982,76 +576,121 @@
     "cases_passed": null,
     "total_cases": null
   },
-  "3487": {
-    "question_number": 3487,
-    "question_name": "maximum-unique-subarray-sum-after-deletion",
-    "timestamp": "2025-04-16T14:53:55.590586",
+  "3153": {
+    "question_number": 3153,
+    "question_name": "sum-of-digit-differences-of-all-pairs",
+    "timestamp": "2025-04-16T23:26:02.111410",
     "status": "Failed",
-    "accuracy": 20.6,
+    "accuracy": 0.31,
     "runtime": null,
     "memory": null,
-    "cases_passed": 191,
-    "total_cases": 927
+    "cases_passed": 2,
+    "total_cases": 643
   },
-  "3488": {
-    "question_number": 3488,
-    "question_name": "closest-equal-element-queries",
-    "timestamp": "2025-04-16T14:54:11.728331",
+  "3154": {
+    "question_number": 3154,
+    "question_name": "find-number-of-ways-to-reach-the-k-th-stair",
+    "timestamp": "2025-04-16T23:26:05.186045",
     "status": "Failed",
-    "accuracy": 14.33,
+    "accuracy": 0.33,
     "runtime": null,
     "memory": null,
-    "cases_passed": 88,
-    "total_cases": 614
+    "cases_passed": 2,
+    "total_cases": 600
   },
-  "3489": {
-    "question_number": 3489,
-    "question_name": "zero-array-transformation-iv",
-    "timestamp": "2025-04-16T14:54:15.920159",
+  "3155": {
+    "question_number": 3155,
+    "question_name": "maximum-number-of-upgradable-servers",
+    "timestamp": "2025-04-16T23:26:10.870061",
     "status": "Failed",
-    "accuracy": 28.71,
+    "accuracy": 0.52,
     "runtime": null,
     "memory": null,
-    "cases_passed": 205,
-    "total_cases": 714
+    "cases_passed": 3,
+    "total_cases": 574
   },
-  "3490": {
-    "question_number": 3490,
-    "question_name": "count-beautiful-numbers",
-    "timestamp": "2025-04-16T14:54:30.231939",
-    "status": "Failed",
-    "accuracy": 0,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": null,
-    "total_cases": null
-  },
-  "3491": {
-    "question_number": 3491,
-    "question_name": "phone-number-prefix",
-    "timestamp": "2025-04-16T14:54:32.910483",
+  "3157": {
+    "question_number": 3157,
+    "question_name": "find-the-level-of-tree-with-minimum-sum",
+    "timestamp": "2025-04-16T23:26:17.812667",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
-      "time_ms": 3,
-      "percentile": 84
+      "time_ms": 96,
+      "percentile": 7
     },
     "memory": {
-      "usage_mb": 17.5,
-      "percentile": 53
+      "usage_mb": 45.0,
+      "percentile": 76
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "3492": {
-    "question_number": 3492,
-    "question_name": "maximum-containers-on-a-ship",
-    "timestamp": "2025-04-16T14:54:35.574804",
+  "3158": {
+    "question_number": 3158,
+    "question_name": "find-the-xor-of-numbers-which-appear-twice",
+    "timestamp": "2025-04-16T23:26:20.456475",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
       "time_ms": 0,
       "percentile": 100
+    },
+    "memory": {
+      "usage_mb": 17.3,
+      "percentile": 99
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3159": {
+    "question_number": 3159,
+    "question_name": "find-occurrences-of-an-element-in-an-array",
+    "timestamp": "2025-04-16T23:26:24.899929",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 61,
+      "percentile": 38
+    },
+    "memory": {
+      "usage_mb": 31.7,
+      "percentile": 84
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3160": {
+    "question_number": 3160,
+    "question_name": "find-the-number-of-distinct-colors-among-the-balls",
+    "timestamp": "2025-04-16T23:26:29.502422",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3161": {
+    "question_number": 3161,
+    "question_name": "block-placement-queries",
+    "timestamp": "2025-04-16T23:26:53.331791",
+    "status": "Failed",
+    "accuracy": 24.06,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 179,
+    "total_cases": 744
+  },
+  "3162": {
+    "question_number": 3162,
+    "question_name": "find-the-number-of-good-pairs-i",
+    "timestamp": "2025-04-16T23:26:56.654983",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 7,
+      "percentile": 45
     },
     "memory": {
       "usage_mb": 17.5,
@@ -1060,82 +699,440 @@
     "cases_passed": null,
     "total_cases": null
   },
-  "3493": {
-    "question_number": 3493,
-    "question_name": "properties-graph",
-    "timestamp": "2025-04-16T14:54:40.995902",
+  "3163": {
+    "question_number": 3163,
+    "question_name": "string-compression-iii",
+    "timestamp": "2025-04-16T23:27:00.258267",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
-      "time_ms": 563,
-      "percentile": 41
+      "time_ms": 277,
+      "percentile": 44
     },
     "memory": {
-      "usage_mb": 17.9,
-      "percentile": 95
+      "usage_mb": 27.8,
+      "percentile": 29
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "3494": {
-    "question_number": 3494,
-    "question_name": "find-the-minimum-amount-of-time-to-brew-potions",
-    "timestamp": "2025-04-16T14:54:47.343092",
+  "3164": {
+    "question_number": 3164,
+    "question_name": "find-the-number-of-good-pairs-ii",
+    "timestamp": "2025-04-16T23:27:14.594026",
     "status": "Failed",
-    "accuracy": 4.84,
+    "accuracy": 0,
     "runtime": null,
     "memory": null,
-    "cases_passed": 36,
-    "total_cases": 744
+    "cases_passed": null,
+    "total_cases": null
   },
-  "3495": {
-    "question_number": 3495,
-    "question_name": "minimum-operations-to-make-array-elements-zero",
-    "timestamp": "2025-04-16T14:55:03.234333",
+  "3165": {
+    "question_number": 3165,
+    "question_name": "maximum-sum-of-subsequence-with-non-adjacent-elements",
+    "timestamp": "2025-04-16T23:27:36.953698",
     "status": "Failed",
-    "accuracy": 0.0,
+    "accuracy": 0,
     "runtime": null,
     "memory": null,
-    "cases_passed": 0,
-    "total_cases": 646
+    "cases_passed": null,
+    "total_cases": null
   },
-  "3496": {
-    "question_number": 3496,
-    "question_name": "maximize-score-after-pair-deletions",
-    "timestamp": "2025-04-16T14:55:19.924206",
-    "status": "Failed",
-    "accuracy": 38.53,
-    "runtime": null,
-    "memory": null,
-    "cases_passed": 304,
-    "total_cases": 789
-  },
-  "3498": {
-    "question_number": 3498,
-    "question_name": "reverse-degree-of-a-string",
-    "timestamp": "2025-04-16T14:55:23.142472",
+  "3167": {
+    "question_number": 3167,
+    "question_name": "better-compression-of-string",
+    "timestamp": "2025-04-16T23:27:41.192432",
     "status": "Success",
     "accuracy": 100,
     "runtime": {
-      "time_ms": 7,
-      "percentile": 79
+      "time_ms": 147,
+      "percentile": 14
     },
     "memory": {
       "usage_mb": 17.7,
-      "percentile": 19
+      "percentile": 74
     },
     "cases_passed": null,
     "total_cases": null
   },
-  "3499": {
-    "question_number": 3499,
-    "question_name": "maximize-active-section-with-trade-i",
-    "timestamp": "2025-04-16T14:55:30.304991",
+  "3168": {
+    "question_number": 3168,
+    "question_name": "minimum-number-of-chairs-in-a-waiting-room",
+    "timestamp": "2025-04-16T23:27:44.317889",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 3,
+      "percentile": 47
+    },
+    "memory": {
+      "usage_mb": 17.7,
+      "percentile": 5
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3169": {
+    "question_number": 3169,
+    "question_name": "count-days-without-meetings",
+    "timestamp": "2025-04-16T23:27:58.533661",
     "status": "Failed",
-    "accuracy": 0.1,
+    "accuracy": 0,
     "runtime": null,
     "memory": null,
-    "cases_passed": 1,
-    "total_cases": 996
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3170": {
+    "question_number": 3170,
+    "question_name": "lexicographically-minimum-string-after-removing-stars",
+    "timestamp": "2025-04-16T23:28:02.212780",
+    "status": "Failed",
+    "accuracy": 70.43,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 424,
+    "total_cases": 602
+  },
+  "3171": {
+    "question_number": 3171,
+    "question_name": "find-subarray-with-bitwise-or-closest-to-k",
+    "timestamp": "2025-04-16T23:28:17.246815",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3173": {
+    "question_number": 3173,
+    "question_name": "bitwise-or-of-adjacent-elements",
+    "timestamp": "2025-04-16T23:28:19.875764",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 0,
+      "percentile": 100
+    },
+    "memory": {
+      "usage_mb": 17.7,
+      "percentile": 5
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3174": {
+    "question_number": 3174,
+    "question_name": "clear-digits",
+    "timestamp": "2025-04-16T23:28:51.388103",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3175": {
+    "question_number": 3175,
+    "question_name": "find-the-first-player-to-win-k-games-in-a-row",
+    "timestamp": "2025-04-16T23:29:07.513380",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3176": {
+    "question_number": 3176,
+    "question_name": "find-the-maximum-length-of-a-good-subsequence-i",
+    "timestamp": "2025-04-16T23:29:09.985030",
+    "status": "Failed",
+    "accuracy": 46.22,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 251,
+    "total_cases": 543
+  },
+  "3177": {
+    "question_number": 3177,
+    "question_name": "find-the-maximum-length-of-a-good-subsequence-ii",
+    "timestamp": "2025-04-16T23:29:12.957533",
+    "status": "Failed",
+    "accuracy": 70.05,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 386,
+    "total_cases": 551
+  },
+  "3178": {
+    "question_number": 3178,
+    "question_name": "find-the-child-who-has-the-ball-after-k-seconds",
+    "timestamp": "2025-04-16T23:29:15.964193",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 3,
+      "percentile": 14
+    },
+    "memory": {
+      "usage_mb": 17.4,
+      "percentile": 78
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3179": {
+    "question_number": 3179,
+    "question_name": "find-the-n-th-value-after-k-seconds",
+    "timestamp": "2025-04-16T23:29:24.230272",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 4199,
+      "percentile": 28
+    },
+    "memory": {
+      "usage_mb": 17.5,
+      "percentile": 97
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3180": {
+    "question_number": 3180,
+    "question_name": "maximum-total-reward-using-operations-i",
+    "timestamp": "2025-04-16T23:29:55.567526",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3181": {
+    "question_number": 3181,
+    "question_name": "maximum-total-reward-using-operations-ii",
+    "timestamp": "2025-04-16T23:29:58.804297",
+    "status": "Failed",
+    "accuracy": 22.47,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 131,
+    "total_cases": 583
+  },
+  "3183": {
+    "question_number": 3183,
+    "question_name": "the-number-of-ways-to-make-the-sum",
+    "timestamp": "2025-04-16T23:30:05.015383",
+    "status": "Failed",
+    "accuracy": 2.01,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 13,
+    "total_cases": 648
+  },
+  "3184": {
+    "question_number": 3184,
+    "question_name": "count-pairs-that-form-a-complete-day-i",
+    "timestamp": "2025-04-16T23:30:08.041379",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 11,
+      "percentile": 57
+    },
+    "memory": {
+      "usage_mb": 17.7,
+      "percentile": 37
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3185": {
+    "question_number": 3185,
+    "question_name": "count-pairs-that-form-a-complete-day-ii",
+    "timestamp": "2025-04-16T23:30:13.105722",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 95,
+      "percentile": 88
+    },
+    "memory": {
+      "usage_mb": 61.5,
+      "percentile": 70
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3186": {
+    "question_number": 3186,
+    "question_name": "maximum-total-damage-with-spell-casting",
+    "timestamp": "2025-04-16T23:30:29.625523",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3187": {
+    "question_number": 3187,
+    "question_name": "peaks-in-array",
+    "timestamp": "2025-04-16T23:30:35.911674",
+    "status": "Failed",
+    "accuracy": 0,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3189": {
+    "question_number": 3189,
+    "question_name": "minimum-moves-to-get-a-peaceful-board",
+    "timestamp": "2025-04-16T23:30:39.184193",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 11,
+      "percentile": 100
+    },
+    "memory": {
+      "usage_mb": 17.7,
+      "percentile": 71
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3190": {
+    "question_number": 3190,
+    "question_name": "find-minimum-operations-to-make-all-elements-divisible-by-three",
+    "timestamp": "2025-04-16T23:30:42.030395",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 4,
+      "percentile": 1
+    },
+    "memory": {
+      "usage_mb": 17.7,
+      "percentile": 27
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3191": {
+    "question_number": 3191,
+    "question_name": "minimum-operations-to-make-binary-array-elements-equal-to-one-i",
+    "timestamp": "2025-04-16T23:30:53.754887",
+    "status": "Failed",
+    "accuracy": 26.27,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 181,
+    "total_cases": 689
+  },
+  "3192": {
+    "question_number": 3192,
+    "question_name": "minimum-operations-to-make-binary-array-elements-equal-to-one-ii",
+    "timestamp": "2025-04-16T23:30:57.404884",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 61,
+      "percentile": 44
+    },
+    "memory": {
+      "usage_mb": 21.4,
+      "percentile": 67
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3193": {
+    "question_number": 3193,
+    "question_name": "count-the-number-of-inversions",
+    "timestamp": "2025-04-16T23:31:05.300671",
+    "status": "Failed",
+    "accuracy": 2.92,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 21,
+    "total_cases": 720
+  },
+  "3194": {
+    "question_number": 3194,
+    "question_name": "minimum-average-of-smallest-and-largest-elements",
+    "timestamp": "2025-04-16T23:31:08.859858",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 0,
+      "percentile": 100
+    },
+    "memory": {
+      "usage_mb": 17.7,
+      "percentile": 31
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3195": {
+    "question_number": 3195,
+    "question_name": "find-the-minimum-area-to-cover-all-ones-i",
+    "timestamp": "2025-04-16T23:31:14.230282",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 455,
+      "percentile": 49
+    },
+    "memory": {
+      "usage_mb": 53.8,
+      "percentile": 68
+    },
+    "cases_passed": null,
+    "total_cases": null
+  },
+  "3196": {
+    "question_number": 3196,
+    "question_name": "maximize-total-cost-of-alternating-subarrays",
+    "timestamp": "2025-04-16T23:31:18.091566",
+    "status": "Failed",
+    "accuracy": 4.19,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 29,
+    "total_cases": 692
+  },
+  "3197": {
+    "question_number": 3197,
+    "question_name": "find-the-minimum-area-to-cover-all-ones-ii",
+    "timestamp": "2025-04-16T23:31:37.312051",
+    "status": "Failed",
+    "accuracy": 6.2,
+    "runtime": null,
+    "memory": null,
+    "cases_passed": 41,
+    "total_cases": 661
+  },
+  "3199": {
+    "question_number": 3199,
+    "question_name": "count-triplets-with-even-xor-set-bits-i",
+    "timestamp": "2025-04-16T23:31:46.133598",
+    "status": "Success",
+    "accuracy": 100,
+    "runtime": {
+      "time_ms": 3430,
+      "percentile": 6
+    },
+    "memory": {
+      "usage_mb": 17.6,
+      "percentile": 62
+    },
+    "cases_passed": null,
+    "total_cases": null
   }
 }

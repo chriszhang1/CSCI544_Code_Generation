@@ -174,7 +174,7 @@ Your task is to provide ONLY the solution code, exactly matching the required fo
             
             # Call the API
             response = self.client.chat.completions.create(
-                model="gpt-4o-mini",
+                model="gpt-4o",
                 messages=[
                     {"role": "system", "content": system_content},
                     {"role": "user", "content": user_content}
@@ -415,7 +415,7 @@ class LeetCodeSolver:
         results_file = ResultProcessor.save_test_results(
             question_number, 
             test_results,
-            self.predicted_tags
+            self.prompt_type
         )
         self._display_results(test_results, test_output['stderr'], results_file)
         
