@@ -1,4 +1,4 @@
-**This problem can be solved using dynamic programming. Please follow these steps:**
+This problem must be solved using dynamic programming. Please follow these steps:
 
 1. Determine whether the problem has an optimal substructure and overlapping subproblems.
 2. Clearly define the DP state. What parameters uniquely describe a subproblem?
