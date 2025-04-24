@@ -270,16 +270,16 @@
 ```json
 {
   "category_specific_prompt": [
-    "Determine if the problem requires quick access to the minimum or maximum element, making a heap appropriate.",
-    "Identify whether a min-heap, max-heap, or custom comparator heap is needed based on the problem's goal.",
-    "Use Python’s `heapq` module for a min-heap and simulate a max-heap by pushing negated values if necessary.",
-    "If custom behavior is required, store tuples or objects in the heap and sort based on the desired priority.",
-    "Understand the role of the heap in the problem: is it for top-k elements, dynamic ordering, or merging streams?",
-    "Manage the heap size carefully if the problem involves tracking only the smallest or largest k elements.",
-    "Handle edge cases like empty input, duplicate values, or frequent insertions and removals efficiently.",
-    "Analyze time complexity of heap operations: O(log n) for push/pop, O(n) for heapify, and O(1) for peek.",
-    "Test with both small and large inputs to validate performance and correctness under stress.",
-    "Trace how the heap evolves during execution for one test case to ensure it maintains the correct invariants."
+    "Determine graph type, size limits, and desired output (paths, connectivity, cycles, MST, flow, etc.).",
+    "Pick a storage model: adjacency list for sparse, matrix for dense, or edge list for sorting tasks.",
+    "Select the core algorithm—BFS, DFS, Dijkstra, Bellman-Ford, Kruskal, Prim, topological sort, Dinic—based on needs.",
+    "Define key state structures (distance, parent, visited, DSU) and uphold algorithm-specific invariants throughout.",
+    "Account for special cases: empty graph, single vertex, disconnected parts, self-loops, parallel edges, negative cycles.",
+    "Implement concise, well-commented Python using heapq, deque, or iterative DFS to avoid recursion depth issues.",
+    "Explain and verify complexity: O(V+E), O(E log V), or O(V²) as dictated by algorithm and input bounds.",
+    "Validate with official samples plus custom stress tests: dense, sparse, pathological, and corner-case inputs.",
+    "Provide a step-by-step trace for one substantive test, showing queue/heap or DSU evolution at key moments.",
+    "Refactor for clarity, confirm all invariants, profile memory if tight, and patch any lingering edge-case failures."
   ]
 }
 ```
@@ -338,4 +338,92 @@
 }
 ```
 
+### Recursion
+```json
+{
+  "category_specific_prompt": [
+    "Identify the problem’s natural recursive structure and define clear base cases that stop further calls.",
+    "Write the recurrence relation: how does the current call reduce input toward the base case?",
+    "Ensure each recursive step makes measurable progress to avoid infinite recursion.",
+    "Decide if extra parameters (index, accumulator, memo map) are needed to pass state efficiently.",
+    "Consider memoization or caching when overlapping subproblems would cause exponential blow-ups.",
+    "Watch recursion depth; switch to iterative or tail-recursion tricks when inputs can exceed ~10⁴ levels.",
+    "Account for edge cases: empty input, size-1 input, maximum depth, and invalid parameters.",
+    "Analyze time and space: call tree size, memo table growth, and O(depth) stack usage.",
+    "Test on minimal, typical, and stress inputs, including ones that hit worst-case depth or branching.",
+    "Trace one full call tree for a representative example, showing arguments and returns at each level."
+  ]
+}
+```
 
+### Trie
+```json
+{
+  "category_specific_prompt": [
+    "Confirm the task benefits from prefix sharing (word insert/search, autocomplete, substring matching, bitwise routing).",
+    "Choose node design: fixed 26/128-child array, hash map, or compressed edges for memory-heavy inputs.",
+    "Define supported ops—insert, delete, exact match, prefix query, longest prefix, count words—with clear return values.",
+    "Implement iterative methods to avoid deep recursion, or add depth checks if recursion is simpler.",
+    "Handle edge cases: empty strings, duplicate inserts, uppercase vs. lowercase, non-ASCII, and wildcard characters.",
+    "Track extra info per node when needed (word end flag, frequency, ID list, min/max weight) and update on every insert/remove.",
+    "Optimize space using lazy node creation, shared terminals, or bit-compressed tries like Patricia/radix when words\*len is large.",
+    "Analyze complexity: O(L) time per op where L is key length, and O(total chars) space; discuss trade-offs for array vs. map nodes.",
+    "Test thoroughly: empty trie, single word, common prefixes, rare prefixes, deletions, and wildcard queries.",
+    "Walk through one representative insertion and lookup, showing node creation, pointer traversal, and final flags."
+  ]
+}
+```
+
+### Segment Tree
+```json
+{
+  "category_specific_prompt": [
+    "Verify the problem needs fast range queries/updates (sum, min-max, gcd, assign, add) beyond naive O(n).",
+    "Choose tree flavor: basic point-update, range-query segment tree or lazy-propagation tree for range updates.",
+    "Design node data: value, pending lazy tag, covered interval [l, r] or array-based (size 4·n) indices.",
+    "Implement build(arr, idx, l, r) to precompute segment values in O(n).",
+    "Write query(idx, l, r, ql, qr) returning the combined result; push lazy tags before descending.",
+    "Write update(idx, l, r, ul, ur, delta/assign) updating values and storing lazy tags efficiently.",
+    "Guard edge cases: n = 0/1, full-range queries, updates outside bounds, and 1-based vs 0-based indexing.",
+    "Analyze complexity: O(log n) per query/update, O(n) build, and O(n) space; include recursion depth (~log n).",
+    "Optimize: iterative tree to dodge recursion limits, bitmask merge tricks, or compress coordinates if n > 1e5.",
+    "Test: small arrays, single-element segments, full-range ops, overlapping updates, and stress random ops to validate results."
+  ]
+}
+```
+
+### Ordered Map
+```json
+{
+  "category_specific_prompt": [
+    "Confirm the need for key-ordered operations (rank, predecessor, range counts, sliding medians, etc.).",
+    "Pick a data structure: built-in bisect list, `sortedcontainers` SortedDict, custom balanced BST, or treap.",
+    "Define core ops—insert, erase, lower_bound / upper_bound, predecessor, successor, range_sum—and return specs.",
+    "Maintain auxiliary info per node if required (subtree size, prefix sum, multiset count) and update on rotations.",
+    "Handle edge cases: duplicates, empty map, smallest/largest keys, out-of-range queries, and mass deletions.",
+    "Guarantee logarithmic performance: O(log n) for updates/queries, O(n) space; explain how balance is kept.",
+    "Watch integer overflow in prefix sums and ensure comparator consistency for composite keys or tuples.",
+    "Implement clean Python with fallback to bisect if `sortedcontainers` unavailable; avoid O(n) scans in loops.",
+    "Test cases: empty, single key, duplicate inserts, boundary queries, range spanning whole map, random ops.",
+    "Trace one scenario step-by-step, showing tree/list state after each insert/erase and how queries find results."
+  ]
+}
+```
+
+### Queue
+```json
+{
+  "category_specific_prompt": [
+    "Verify the task really needs FIFO order (level-order traversal, task scheduling, fixed-size window, etc.).",
+    "Pick an implementation: collections.deque for O(1) pops/pushes, list with head index, or circular array if size capped.",
+    "Define what each queued item stores (value, index, timestamp, node) and any extra metadata required.",
+    "Lay out the main loop: when to enqueue, when to dequeue, and the condition that ends processing.",
+    "Cover edge cases: start with an empty queue, single element, capacity limits, wrap-around behavior, or premature empties.",
+    "Keep space tight—drop stale or out-of-window items quickly (monotonic or time-based pruning when relevant).",
+    "State complexity: usually O(n) total time (O(1) per op) and O(k) space where k is max queue size.",
+    "Code clean Python using deque methods (append, popleft) and avoid list.pop(0) or recursion.",
+    "Test thoroughly: empty input, minimal length, bursts of operations, and maximum allowed sizes.",
+    "Walk through one example step-by-step, logging queue contents after each enqueue/dequeue to prove correctness."
+  ]
+}
+```
